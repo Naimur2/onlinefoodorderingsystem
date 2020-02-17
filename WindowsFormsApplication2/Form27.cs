@@ -21,26 +21,7 @@ namespace WindowsFormsApplication2
 
         private void Form27_Load(object sender, EventArgs e)
         {
-            string queryb = "SELECT Orders.ord_no,address,delivery.status from delivery,orders,customer where delivery.Ord_no=orders.Ord_no and orders.username=customer.username and user='"+Cryptography.Encrypt(label1.Text)+"'";
-            MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
-            DataTable zz = new DataTable();
-
-            dataa.Fill(zz);
-
-            DataTable cc = new DataTable();
-
-            int i = zz.Rows.Count;
-
-            cc.Columns.Add("Orderno", typeof(string));
-            cc.Columns.Add("Address", typeof(string));
-            cc.Columns.Add("Status", typeof(string));
-            for (int j = 0; j < i; j++)
-            {
-               
-                cc.Rows.Add(Cryptography.Decrypt(zz.Rows[j][0].ToString()), zz.Rows[j][1].ToString(), zz.Rows[j][1].ToString());
-
-            }
-            DataGridView1.DataSource = cc;
+            comboBox2.Text = "Pending";
 
         }
 
@@ -82,6 +63,30 @@ namespace WindowsFormsApplication2
                 MessageBox.Show("Data updated", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
             }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string queryb = "SELECT Orders.ord_no,address,delivery.status from delivery,orders,customer where delivery.Ord_no=orders.Ord_no and orders.username=customer.username and delivery.status='"+comboBox2.Text+"' and user='" + Cryptography.Encrypt(label1.Text) + "'";
+            MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
+            DataTable zz = new DataTable();
+
+            dataa.Fill(zz);
+
+            DataTable cc = new DataTable();
+
+            int i = zz.Rows.Count;
+
+            cc.Columns.Add("Orderno", typeof(string));
+            cc.Columns.Add("Address", typeof(string));
+            cc.Columns.Add("Status", typeof(string));
+            for (int j = 0; j < i; j++)
+            {
+
+                cc.Rows.Add(Cryptography.Decrypt(zz.Rows[j][0].ToString()), zz.Rows[j][1].ToString(), zz.Rows[j][1].ToString());
+
+            }
+            DataGridView1.DataSource = cc;
         }
     }
 }

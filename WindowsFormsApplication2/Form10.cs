@@ -116,11 +116,6 @@ namespace WindowsFormsApplication2
 
         }
 
-        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-          
-        }
-
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             
@@ -129,6 +124,87 @@ namespace WindowsFormsApplication2
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void bunifuButton3_Click(object sender, EventArgs e)
+        {
+            string usernam = Cryptography.Encrypt(textBox2.Text);
+            string mail = Cryptography.Encrypt(textBox2.Text);
+
+            string query = " select* FROM manager,customer,admin,deliveryboy where customer.username = '" + usernam + "' and manager.mid = '" + usernam + "' and admin.masterid = '" + usernam + "' and deliveryboy.user = '" + usernam + "'";
+
+            string query2 = "select * from customer,manager,admin,deliveryboy where  customer.email='" + mail + "' and manager.memail='" +textBox3.Text + "' and deliveryboy.demail ='" + textBox3.Text + "' and admin.mastermail='" + mail + "' ";
+
+            MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+            MySqlDataAdapter dat = new MySqlDataAdapter(query2, con);
+
+            DataTable dt = new DataTable();
+            DataTable it = new DataTable();
+
+            data.Fill(dt);
+            dat.Fill(it);
+            if (dt.Rows.Count==1)
+            {
+                MessageBox.Show("Username Not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            }
+          else  if (it.Rows.Count == 1)
+            {
+                MessageBox.Show("Username Not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            }
+
+
+
+          else  if (textBox2.Text == "" && textBox1.Text == "")
+            {
+                MessageBox.Show("Please add InFormation", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            }
+            else if (textBox1.Text.Length < 6)
+            {
+
+                MessageBox.Show("Password should be 6character", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+
+            }
+            else
+            {
+                MemoryStream ms = new MemoryStream();
+                Image profile = Properties.Resources.user;
+                profile.Save(ms, profile.RawFormat);
+                byte[] img = ms.ToArray();
+                string user = Cryptography.Encrypt(textBox2.Text);
+                string pass = Cryptography.Encrypt(textBox1.Text);
+              
+                MySqlCommand cm = new MySqlCommand();
+                cm.Connection = con;
+                cm.CommandText = "insert into manager(mid,name,keycode,maddress,memail,mphone,mpic) values (@mid,@name,@keycode,@maddress,@memail,@mphone,@mpic)";
+                cm.Parameters.AddWithValue("@mid", user);
+                cm.Parameters.AddWithValue("@keycode", pass);
+                cm.Parameters.AddWithValue("@name", "Not updated");
+                cm.Parameters.AddWithValue("maddress", "Not updated");
+                cm.Parameters.AddWithValue("@memail", textBox3.Text);
+                cm.Parameters.AddWithValue("@mphone", "Not updated");
+                cm.Parameters.AddWithValue("@image", img);
+                con.Open();
+                cm.ExecuteNonQuery();
+
+                con.Close();
+            }
+         
+        }
+
+        private void bunifuButton1_Click_1(object sender, EventArgs e)
+        {
+            MySqlCommand cm = new MySqlCommand();
+            cm.Connection = con;
+            cm.CommandText = "Truncate Table manager)";
+           
+            con.Open();
+            cm.ExecuteNonQuery();
+
+            con.Close();
         }
     }
 }

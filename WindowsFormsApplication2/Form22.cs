@@ -58,7 +58,7 @@ namespace WindowsFormsApplication2
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            log.openchild(new Form26(), panel1);
+            log.openchild(new Form19(""), panel1);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

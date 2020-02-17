@@ -23,6 +23,7 @@ namespace WindowsFormsApplication2
 
         private void admin_Load(object sender, EventArgs e)
         {
+            b5_Click((object)sender, (EventArgs)e);
             timer1.Start();
             label72.Text = DateTime.Now.ToShortDateString();
             label73.Text = DateTime.Now.ToShortTimeString();

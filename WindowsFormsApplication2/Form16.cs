@@ -50,7 +50,7 @@ namespace WindowsFormsApplication2
             label73.Text = DateTime.Now.ToShortTimeString();
 
 
-            string queryb = "SELECT orders.ord_no as SI,customer.address,food.foodname as food,orders.amount as Quantity,orders.tk as Tk,orders.status as OrderStatus,orders.Date as Date,orders.Time as Time from customer,orders,food Where orders.foodno=food.foodno and orders.username=customer.username and orders.status='pending' and order by ord_no desc";
+            string queryb = "SELECT orders.ord_no as SI,customer.address,food.foodname as food,orders.amount as Quantity,orders.tk as Tk,orders.status as OrderStatus,orders.Date as Date,orders.Time as Time from customer,orders,food Where orders.foodno=food.foodno and orders.username=customer.username and orders.status='pending' order by ord_no desc";
             MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
             DataTable zz = new DataTable();
             dataa.Fill(zz);
@@ -293,7 +293,7 @@ namespace WindowsFormsApplication2
                 dataa.Fill(zz);
                 if (zz.Rows.Count != 0)
                 {
-                    textBox2.Text = zz.Rows[0].ToString();
+                    textBox2.Text = zz.Rows[0][0].ToString();
                 }
                 else
                 {
@@ -353,7 +353,7 @@ namespace WindowsFormsApplication2
             {
                 if (DataGridView1.Rows.Count != 0)
                 {
-                    textBox2.Text = zz.Rows[0][5].ToString();
+                   
                     username.Text = zz.Rows[0][0].ToString();
                     Foodname.Text = zz.Rows[0][2].ToString();
                     quantity.Text = zz.Rows[0][3].ToString();
@@ -411,41 +411,50 @@ namespace WindowsFormsApplication2
         private void bunifuButton1_Click_1(object sender, EventArgs e)
         {if (comboBox3.Text != "" && comboBox4.Text != "")
             {
+                try
+                {
+                    int i = Int32.Parse(label2.Text);
+                    string aa = comboBox1.Text;
 
-                int i = Int32.Parse(label2.Text);
-                string aa = comboBox1.Text;
-
-                MySqlCommand cm = new MySqlCommand();
-                cm.Connection = con;
-                cm.CommandText = " UPDATE `orders` SET `status` = 'OnTheway' WHERE `orders`.`ord_no` = '" + i + "'";
-
-
-                con.Open();
-                cm.ExecuteNonQuery();
-                con.Close();
-               
-
-                MySqlCommand mm = new MySqlCommand();
-                mm.Connection = con;
-                mm.CommandText = "Insert into delivery values(@ord,@user,@status)";
-                mm.Parameters.AddWithValue("ord", username.Text);
-                mm.Parameters.AddWithValue("user",Cryptography.Encrypt( comboBox4.Text));
-                mm.Parameters.AddWithValue("status", "pending");
-
-                con.Open();
-                mm.ExecuteNonQuery();
-                con.Close();
-
-                MessageBox.Show("Data updated");
+                    MySqlCommand cm = new MySqlCommand();
+                    cm.Connection = con;
+                    cm.CommandText = " UPDATE `orders` SET `status` = 'OnTheway' WHERE `orders`.`ord_no` = '" + i + "'";
 
 
+                    con.Open();
+                    cm.ExecuteNonQuery();
+                    con.Close();
 
-                string queryb = "SELECT orders.ord_no as SI,customer.address,food.foodname as food,orders.amount as Quantity,orders.tk as Tk,orders.status as Status,orders.Date as Date,orders.Time as Time from customer,orders,food Where orders.foodno=food.foodno and orders.username=customer.username and orders.status='OnThrway ' order by ord_no desc";
-                MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
-                DataTable zz = new DataTable();
-                dataa.Fill(zz);
-                DataGridView1.DataSource = zz;
-                comboBox2.Text = "Ontheway";
+
+                    MySqlCommand mm = new MySqlCommand();
+                    mm.Connection = con;
+                    mm.CommandText = "Insert into delivery values(@ord,@user,@status)";
+                    mm.Parameters.AddWithValue("ord", username.Text);
+                    mm.Parameters.AddWithValue("user", Cryptography.Encrypt(comboBox4.Text));
+                    mm.Parameters.AddWithValue("status", "pending");
+
+                    con.Open();
+                    mm.ExecuteNonQuery();
+                    con.Close();
+
+                    MessageBox.Show("Data updated");
+
+
+
+                    string queryb = "SELECT orders.ord_no as SI,customer.address,food.foodname as food,orders.amount as Quantity,orders.tk as Tk,orders.status as Status,orders.Date as Date,orders.Time as Time from customer,orders,food Where orders.foodno=food.foodno and orders.username=customer.username and orders.status='OnThrway ' order by ord_no desc";
+                    MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
+                    DataTable zz = new DataTable();
+                    dataa.Fill(zz);
+                    DataGridView1.DataSource = zz;
+                    comboBox2.Text = "Ontheway";
+                }
+                catch (Exception x)
+                {
+                    MessageBox.Show("You have alreadey send it", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+
+
+                }
             }
             else
             {

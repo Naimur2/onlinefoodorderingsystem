@@ -36,10 +36,5 @@ namespace WindowsFormsApplication2
         {
             log.openchild(new Form27(label.Text), panel3);
         }
-
-        private void b3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
