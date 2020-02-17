@@ -17,8 +17,10 @@ namespace WindowsFormsApplication2
         {
             InitializeComponent();
             label1.Text = ms;
+
         }
-        MySqlConnection con = new MySqlConnection("server=localhost;database=foodbank;username=root;password=;");
+        MySqlConnection con = new MySqlConnection(Cryptography.con());
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -35,17 +37,17 @@ namespace WindowsFormsApplication2
 
             bunifuLabel1.Text=label1.Text;
 
-           
-            string queryb = "SELECT name,phone,password,address,pic,email from customer Where username='" + this.label1.Text+ "'";
+            string user = Cryptography.Encrypt(label1.Text);
+            string queryb = "SELECT name,phone,address,pic,email from customer Where username='" + user+ "'";
             MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
             DataTable zz = new DataTable();
             dataa.Fill(zz);
             bunifuMaterialTextbox1.Text = zz.Rows[0][0].ToString();
             bunifuMaterialTextbox2.Text = zz.Rows[0][1].ToString();
-            bunifuMaterialTextbox3.Text = zz.Rows[0][2].ToString();
-            bunifuMaterialTextbox4.Text = zz.Rows[0][3].ToString();
-            bunifuLabel2.Text = zz.Rows[0][5].ToString();
-            byte[] img = (byte[])zz.Rows[0][4];
+            bunifuLabel2.Text = Cryptography.Decrypt(zz.Rows[0][4].ToString());
+            bunifuMaterialTextbox4.Text = zz.Rows[0][2].ToString();
+            
+            byte[] img = (byte[])zz.Rows[0][3];
             MemoryStream ms = new MemoryStream(img);
             bunifuPictureBox2.Image = Image.FromStream(ms);
 
@@ -56,8 +58,7 @@ namespace WindowsFormsApplication2
             bunifuMaterialTextbox2.LineFocusedColor = Color.FromArgb(21, 66, 139);
             bunifuMaterialTextbox2.LineMouseHoverColor = Color.FromArgb(21, 66, 139);
 
-            bunifuMaterialTextbox3.LineFocusedColor = Color.FromArgb(21, 66, 139);
-            bunifuMaterialTextbox3.LineMouseHoverColor = Color.FromArgb(21, 66, 139);
+            
 
             bunifuMaterialTextbox4.LineFocusedColor = Color.FromArgb(21, 66, 139);
             bunifuMaterialTextbox4.LineMouseHoverColor = Color.FromArgb(21, 66, 139);
@@ -86,29 +87,13 @@ namespace WindowsFormsApplication2
 
         }
 
-        private void radButton1_Click(object sender, EventArgs e)
+        
+
+
+        public void save()
         {
-            bunifuButton5.Visible = true;
-            bunifuButton6.Visible = true;
-            bunifuMaterialTextbox1.Enabled = true;
-            bunifuMaterialTextbox2.Enabled = true;
-            bunifuMaterialTextbox3.Enabled = true;
-            bunifuMaterialTextbox4.Enabled = true;
-            bunifuMaterialTextbox1.LineFocusedColor = Color.Blue;
-            bunifuMaterialTextbox1.LineMouseHoverColor = Color.Blue;
 
-            bunifuMaterialTextbox2.LineFocusedColor = Color.Blue;
-            bunifuMaterialTextbox2.LineMouseHoverColor = Color.Blue;
-
-            bunifuMaterialTextbox3.LineFocusedColor = Color.Blue;
-            bunifuMaterialTextbox3.LineMouseHoverColor = Color.Blue;
-            bunifuMaterialTextbox3.isPassword = false;
-            bunifuMaterialTextbox4.LineFocusedColor = Color.Blue;
-            bunifuMaterialTextbox4.LineMouseHoverColor = Color.Blue;
-        }
-
-        private void bunifuButton5_Click(object sender, EventArgs e)
-        {
+            string user = Cryptography.Encrypt(label1.Text);
 
 
 
@@ -132,24 +117,7 @@ namespace WindowsFormsApplication2
                     bunifuLabel5.Visible = true;
 
                 }
-                else if (bunifuMaterialTextbox3.Text == "")
-                {
-
-                    bunifuLabel6.Visible = true;
-
-                }
-                else if (bunifuMaterialTextbox3.Text.Length < 6)
-                {
-                    bunifuLabel6.Text = "Password should have minimum 6 characters";
-                    bunifuLabel6.Visible = true;
-
-                }
-                else if (bunifuMaterialTextbox3.Text.Length > 14)
-                {
-                    bunifuLabel6.Text = "Password should have Maximum 14 characters";
-                    bunifuLabel6.Visible = true;
-
-                }
+               
                 else if (bunifuMaterialTextbox4.Text == "")
                 {
 
@@ -168,11 +136,11 @@ namespace WindowsFormsApplication2
 
                     MySqlCommand cm = new MySqlCommand();
                     cm.Connection = con;
-                    cm.CommandText = "update customer set name=@name,phone=@phone,address=@address,password=@password where username=@username";
+                    cm.CommandText = "update customer set name=@name,phone=@phone,address=@address where username=@username";
 
-                    cm.Parameters.AddWithValue("@username", label1.Text);
+                    cm.Parameters.AddWithValue("@username", user);
                     cm.Parameters.AddWithValue("@name", bunifuMaterialTextbox1.Text);
-                    cm.Parameters.AddWithValue("@password", bunifuMaterialTextbox3.Text);
+                   
 
                     cm.Parameters.AddWithValue("@phone", bunifuMaterialTextbox2.Text);
                     cm.Parameters.AddWithValue("@address", bunifuMaterialTextbox4.Text);
@@ -183,24 +151,7 @@ namespace WindowsFormsApplication2
                     con.Close();
 
 
-                    bunifuButton5.Visible = false;
-                    bunifuButton6.Visible = false;
-                    bunifuMaterialTextbox1.Enabled = false;
-                    bunifuMaterialTextbox2.Enabled = false;
-                    bunifuMaterialTextbox3.Enabled = false;
-                    bunifuMaterialTextbox4.Enabled = false;
-                    bunifuMaterialTextbox1.LineFocusedColor = Color.FromArgb(21, 66, 139);
-                    bunifuMaterialTextbox1.LineMouseHoverColor = Color.FromArgb(21, 66, 139);
-
-                    bunifuMaterialTextbox2.LineFocusedColor = Color.FromArgb(21, 66, 139);
-                    bunifuMaterialTextbox2.LineMouseHoverColor = Color.FromArgb(21, 66, 139);
-
-                    bunifuMaterialTextbox3.LineFocusedColor = Color.FromArgb(21, 66, 139);
-                    bunifuMaterialTextbox3.LineMouseHoverColor = Color.FromArgb(21, 66, 139);
-
-                    bunifuMaterialTextbox4.LineFocusedColor = Color.FromArgb(21, 66, 139);
-                    bunifuMaterialTextbox4.LineMouseHoverColor = Color.FromArgb(21, 66, 139);
-
+                  
                     MessageBox.Show("Youe changes has Been saved ");
 
 
@@ -212,22 +163,19 @@ namespace WindowsFormsApplication2
             }
 
 
-
-
-
-
-
         }
 
-        private void bunifuButton6_Click(object sender, EventArgs e)
+
+        public void cancel()
         {
-            string queryb = "SELECT name,phone,password,address,pic,email from customer Where username='" + this.label1.Text + "'";
+            string user = Cryptography.Encrypt(label1.Text);
+            string queryb = "SELECT name,phone,password,address,pic,email from customer Where username='" + user + "'";
             MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
             DataTable zz = new DataTable();
             dataa.Fill(zz);
             bunifuMaterialTextbox1.Text = zz.Rows[0][0].ToString();
             bunifuMaterialTextbox2.Text = zz.Rows[0][1].ToString();
-            bunifuMaterialTextbox3.Text = zz.Rows[0][2].ToString();
+          
             bunifuMaterialTextbox4.Text = zz.Rows[0][3].ToString();
             bunifuLabel2.Text = zz.Rows[0][5].ToString();
             byte[] img = (byte[])zz.Rows[0][4];
@@ -235,59 +183,43 @@ namespace WindowsFormsApplication2
             bunifuPictureBox2.Image = Image.FromStream(ms);
 
 
-            bunifuButton5.Visible = false;
-            bunifuButton6.Visible = false;
-            bunifuMaterialTextbox1.Enabled = false;
-            bunifuMaterialTextbox2.Enabled = false;
-            bunifuMaterialTextbox3.Enabled = false;
-            bunifuMaterialTextbox4.Enabled = false;
-            bunifuMaterialTextbox3.isPassword = true;
-            bunifuMaterialTextbox1.LineFocusedColor = Color.FromArgb(21, 66, 139);
-            bunifuMaterialTextbox1.LineMouseHoverColor = Color.FromArgb(21, 66, 139);
+    
 
-            bunifuMaterialTextbox2.LineFocusedColor = Color.FromArgb(21, 66, 139);
-            bunifuMaterialTextbox2.LineMouseHoverColor = Color.FromArgb(21, 66, 139);
 
-            bunifuMaterialTextbox3.LineFocusedColor = Color.FromArgb(21, 66, 139);
-            bunifuMaterialTextbox3.LineMouseHoverColor = Color.FromArgb(21, 66, 139);
 
-            bunifuMaterialTextbox4.LineFocusedColor = Color.FromArgb(21, 66, 139);
-            bunifuMaterialTextbox4.LineMouseHoverColor = Color.FromArgb(21, 66, 139);
         }
 
+
+
+
+
+
+        private void bunifuButton5_Click(object sender, EventArgs e)
+        {
+           try
+            {
+                save();
+
+
+            }
+                 catch(Exception)
+            {
+
+                MessageBox.Show("Error", "No connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+              
+
+
+           
+
+        }
+
+        
+
+       
         private void bunifuPictureBox3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                OpenFileDialog opf = new OpenFileDialog();
-                opf.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
-                if (opf.ShowDialog() == DialogResult.OK)
-                {
-                    bunifuPictureBox2.Image = Image.FromFile(opf.FileName);
-
-
-                    MemoryStream ms = new MemoryStream();
-                    bunifuPictureBox2.Image.Save(ms, bunifuPictureBox2.Image.RawFormat);
-                    byte[] img = ms.ToArray();
-                    MySqlCommand cm = new MySqlCommand();
-                    cm.Connection = con;
-                    cm.CommandText = "update customer set pic=@image where username=@username";
-
-                    cm.Parameters.AddWithValue("@username", label1.Text);
-                   
-                    cm.Parameters.AddWithValue("@image", img);
-                    con.Open();
-                    cm.ExecuteNonQuery();
-
-                    con.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Please select image under 40 Mib");
-
-            }
+            
         }
 
         private void bunifuLabel2_Click_1(object sender, EventArgs e)
@@ -316,15 +248,7 @@ namespace WindowsFormsApplication2
 
         }
 
-        private void bunifuMaterialTextbox3_OnValueChanged(object sender, EventArgs e)
-        {
-            if (bunifuMaterialTextbox3.Text != "")
-            {
-
-                bunifuLabel6.Visible = false;
-
-            }
-        }
+       
 
         private void bunifuMaterialTextbox4_OnValueChanged(object sender, EventArgs e)
         {
@@ -355,10 +279,16 @@ namespace WindowsFormsApplication2
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             Form8 vv = new Form8();
+            vv.LostFocus += new EventHandler(vv_LostFocus);
             vv.Show();
 
         }
-
+        void vv_LostFocus(object sender, EventArgs e)
+        {
+            Form8 vv = sender as Form8;
+           vv.Close();
+            vv.Dispose();
+        }
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
@@ -401,25 +331,21 @@ namespace WindowsFormsApplication2
         private void bunifuButton3_Click(object sender, EventArgs e)
         {
             
-            Form10 ok = new Form10(label1.Text);
-            ok.Show();
-            timer1.Start();
+           
         }
 
         private void bunifuButton4_Click(object sender, EventArgs e)
         {
-            Form12 ok = new Form12(label1.Text);
-            ok.Show();
-            timer1.Start();
+            
         }
 
         private void radButton1_Click_1(object sender, EventArgs e)
         {
             bunifuButton5.Visible = true;
-            bunifuButton6.Visible = true;
+           
             bunifuMaterialTextbox1.Enabled = true;
             bunifuMaterialTextbox2.Enabled = true;
-            bunifuMaterialTextbox3.Enabled = true;
+          
             bunifuMaterialTextbox4.Enabled = true;
             bunifuMaterialTextbox1.LineFocusedColor = Color.Blue;
             bunifuMaterialTextbox1.LineMouseHoverColor = Color.Blue;
@@ -427,9 +353,7 @@ namespace WindowsFormsApplication2
             bunifuMaterialTextbox2.LineFocusedColor = Color.Blue;
             bunifuMaterialTextbox2.LineMouseHoverColor = Color.Blue;
 
-            bunifuMaterialTextbox3.LineFocusedColor = Color.Blue;
-            bunifuMaterialTextbox3.LineMouseHoverColor = Color.Blue;
-            bunifuMaterialTextbox3.isPassword = false;
+        
             bunifuMaterialTextbox4.LineFocusedColor = Color.Blue;
             bunifuMaterialTextbox4.LineMouseHoverColor = Color.Blue;
         }
@@ -451,6 +375,65 @@ namespace WindowsFormsApplication2
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want to Exit?";
+            string title = "Order";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+
+                Form2 gg = new Form2();
+                gg.Show();
+                this.Hide();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void Form7_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog opf = new OpenFileDialog();
+                opf.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+                if (opf.ShowDialog() == DialogResult.OK)
+                {
+                    bunifuPictureBox2.Image = Image.FromFile(opf.FileName);
+
+
+                    MemoryStream ms = new MemoryStream();
+                    bunifuPictureBox2.Image.Save(ms, bunifuPictureBox2.Image.RawFormat);
+                    byte[] img = ms.ToArray();
+                    MySqlCommand cm = new MySqlCommand();
+                    cm.Connection = con;
+                    cm.CommandText = "update customer set pic=@image where username=@username";
+
+                    cm.Parameters.AddWithValue("@username",Cryptography.Encrypt( label1.Text));
+
+                    cm.Parameters.AddWithValue("@image", img);
+                    con.Open();
+                    cm.ExecuteNonQuery();
+
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Please select image under 40 Mib");
+
+            }
         }
     }
 }

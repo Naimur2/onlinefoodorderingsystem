@@ -7,48 +7,128 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient;
+using System.IO;
+
 namespace WindowsFormsApplication2
 {
     public partial class Form10 : Form
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-             (
-                 int nLeftRect,     // x-coordinate of upper-left corner
-                 int nTopRect,      // y-coordinate of upper-left corner
-                 int nRightRect,    // x-coordinate of lower-right corner
-                 int nBottomRect,   // y-coordinate of lower-right corner
-                 int nWidthEllipse, // width of ellipse
-                 int nHeightEllipse // height of ellipse
-             );
-        public Form10(string oo)
+
+       
+        public Form10()
         {
             
             InitializeComponent();
-            label1.Text = oo;
+            
         }
-        int count = 0;
+        MySqlConnection con = new MySqlConnection(Cryptography.con());
+
         private void Form10_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.None;
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
-            timer1.Start();
+            
+
+
+
+            string queryb = "SELECT manager.name as 'Manager Name',shop.s_name as 'Shop name',maddress as Address,memail as Email,mphone as phone,mpic from manager,shop where manager.mid=shop.mid";
+            MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
+            DataTable zz = new DataTable();
+            dataa.Fill(zz);
+           
+
+            mname.Text = zz.Rows[0][0].ToString();
+            sname.Text = zz.Rows[0][1].ToString();
+            maddress.Text = zz.Rows[0][2].ToString();
+            mmail.Text = zz.Rows[0][3].ToString();
+            mphone.Text = zz.Rows[0][4].ToString();
+
+
+            try {
+                byte[] img = (byte[])zz.Rows[0][5];
+                MemoryStream ms = new MemoryStream(img);
+                bunifuPictureBox1.Image = Image.FromStream(ms);
+            }
+            catch(Exception ex)
+            {
+
+
+                bunifuPictureBox1.Image =Properties.Resources.user;
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Interval = 5;
-            rectangleShape2.Width += 20;
-            count += 20;
-            if (rectangleShape2.Width >= 318)
-            {
+           
+        }
 
-                timer1.Stop();
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
+        }
 
-                Form11 nn = new Form11(label1.Text);
-                nn.Show();
-                this.Hide();
-            }
+        private void username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

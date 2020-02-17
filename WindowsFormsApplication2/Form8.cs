@@ -53,5 +53,15 @@ namespace WindowsFormsApplication2
         {
             this.Hide();
         }
+
+        private void Form8_MouseCaptureChanged(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void Form8_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -6,49 +6,56 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
+
 namespace WindowsFormsApplication2
 {
     public partial class Form9 : Form
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-              (
-                  int nLeftRect,     // x-coordinate of upper-left corner
-                  int nTopRect,      // y-coordinate of upper-left corner
-                  int nRightRect,    // x-coordinate of lower-right corner
-                  int nBottomRect,   // y-coordinate of lower-right corner
-                  int nWidthEllipse, // width of ellipse
-                  int nHeightEllipse // height of ellipse
-              );
-        public Form9(string ms)
+        public Form9(string mm)
         {
             InitializeComponent();
-           label1.Text=ms;
+            label1.Text = mm;
         }
-        int count = 0;
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            log.openchild(new Form22(label1.Text),panel2);
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            log.openchild(new Form16(label1.Text), panel2);
+
+        }
+
+        private void bunifuButton3_Click(object sender, EventArgs e)
+        {
+            log.openchild(new Form14(label1.Text), panel2);
+        }
+
         private void Form9_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.None;
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
             timer1.Start();
+            label72.Text = DateTime.Now.ToShortDateString();
+            label73.Text = DateTime.Now.ToShortTimeString();
+            log.openchild(new Form22(label1.Text), panel2);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            timer1.Start();
+           
+            label73.Text = DateTime.Now.ToShortTimeString();
+        }
 
-            timer1.Interval = 5;
-            rectangleShape2.Width += 20;
-            count += 20;
-            if (rectangleShape2.Width >= 318)
-            {
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            log.Exit();
+        }
 
-                timer1.Stop();
-                this.Hide();
-                Form7 nn = new Form7(label1.Text);
-                nn.Show();
-
-            }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            log.logout(this);
         }
     }
 }

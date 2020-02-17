@@ -46,7 +46,7 @@ namespace WindowsFormsApplication2
 
                 timer1.Stop();
                 
-                Form5 nn = new Form5(label1.Text);
+                Form20 nn = new Form20(label1.Text);
                 nn.Show();
                 this.Hide();
             }

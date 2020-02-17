@@ -22,7 +22,7 @@ namespace WindowsFormsApplication2
         {
 
         }
-        MySqlConnection con = new MySqlConnection("server=localhost;database=foodbank;username=root;password=;");
+        MySqlConnection con = new MySqlConnection(Cryptography.con());
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Visible = false;
@@ -45,28 +45,34 @@ namespace WindowsFormsApplication2
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-
-            string query = "select * from customer where username='" + this.username.Text + "'";
-            string query2 = "select * from customer where  email='" + this.email.Text + "'";
+            string usernam = Cryptography.Encrypt(username.Text);
+            string mail= Cryptography.Encrypt(email.Text);
+            string query = " select* FROM manager,customer,admin,deliveryboy where customer.username = '" + usernam + "' and manager.mid = '" + usernam + "' and admin.masterid = '" + usernam + "' and deliveryboy.user = '" + usernam + "'";
+           
+            string query2 = "select * from customer,manager,admin,deliveryboy where  customer.email='" + mail + "' and manager.memail='" + mail + "' and deliveryboy.demail ='" + mail + "' and admin.mastermail='" + mail + "' ";
+           
             MySqlDataAdapter data = new MySqlDataAdapter(query, con);
             MySqlDataAdapter data2 = new MySqlDataAdapter(query2, con);
+      
             DataTable dt = new DataTable();
             DataTable dt2 = new DataTable();
+        
             data.Fill(dt);
             data2.Fill(dt2);
+        
             Regex mRegxExpression = new Regex("^[a-zA -Z0-9_]{4,16}@[a-z0-9A-Z_]{2,10}.[a-z.A-Z0-9]{2,6}$");
 
             if (dt.Rows.Count == 1)
             {
 
                 MessageBox.Show("Account already Exist,Please choose different username", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                username.Focus();
             }
             else if (dt2.Rows.Count == 1)
             {
 
                 MessageBox.Show("Account already Exist,Please choose different email", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                email.Focus();
             }
 
             else if (username.Text == "")
@@ -110,14 +116,14 @@ namespace WindowsFormsApplication2
                 label4.Visible = true;
                 timer4.Start();
             }
-            else if (password.Text.Length > 14)
+            else if (password.Text.Length > 12)
             {
 
-                label4.Text = "Password maximum fourteen character";
+                label4.Text = "Password maximum twelve character";
                 label4.Visible = true;
                 timer4.Start();
             }
-            else if (!mRegxExpression.IsMatch(email.Text))
+            else if (Cryptography.vmail(email.Text)==false)
             {
 
                 label2.Visible = true;
@@ -128,15 +134,17 @@ namespace WindowsFormsApplication2
                 MemoryStream ms = new MemoryStream();
                 profile.Image.Save(ms, profile.Image.RawFormat);
                 byte[] img = ms.ToArray();
-
+               string user= Cryptography.Encrypt(username.Text);
+                string pass = Cryptography.Encrypt(password.Text);
+                string mil = Cryptography.Encrypt(email.Text);
                 MySqlCommand cm = new MySqlCommand();
                 cm.Connection = con;
-                cm.CommandText = "insert into customer(si,username,name,password,email,phone,address,pic) values (null,@username,@name,@password,@email,@phone,@address,@image)";
-
-                cm.Parameters.AddWithValue("@username", username.Text);
-                cm.Parameters.AddWithValue("@name", "mr user");
-                cm.Parameters.AddWithValue("@password", password.Text);
-                cm.Parameters.AddWithValue("@email", email.Text);
+                cm.CommandText = "insert into customer(Si,username,name,password,email,phone,address,pic) values (@Si,@username,@name,@password,@email,@phone,@address,@image)";
+                cm.Parameters.AddWithValue("@Si", null);
+                cm.Parameters.AddWithValue("@username", usernam);
+                cm.Parameters.AddWithValue("@name", "Not updated");
+                cm.Parameters.AddWithValue("@password", pass);
+                cm.Parameters.AddWithValue("@email", mil);
                 cm.Parameters.AddWithValue("@phone", "01234567891");
                 cm.Parameters.AddWithValue("@address", address.Text);
                 cm.Parameters.AddWithValue("@image", img);
@@ -149,14 +157,14 @@ namespace WindowsFormsApplication2
                 om.Connection = con;
                 om.CommandText = "insert into ratings values (@username,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)";
 
-                om.Parameters.AddWithValue("@username", username.Text);
+                om.Parameters.AddWithValue("@username", user);
                 con.Open();
                 om.ExecuteNonQuery();
                 MessageBox.Show("Your account has been created\nPlease login.", "Successful", MessageBoxButtons.OK);
                 con.Close();
 
                
-                Form1 mm = new Form1();
+                Form2 mm = new Form2();
                 
                 mm.Show();
                 timer5.Start();
@@ -172,7 +180,7 @@ namespace WindowsFormsApplication2
 
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
-            Form1 mm = new Form1();
+            Form2 mm = new Form2();
             
             mm.Show();
             timer5.Start();
@@ -286,6 +294,41 @@ namespace WindowsFormsApplication2
 
                 label3.Visible = false;
             }
+        }
+
+        private void bunifuLabel5_Click(object sender, EventArgs e)
+        {
+            Form13 gg = new Form13();
+            gg.Show();
+        }
+
+        private void bunifuLabel4_Click(object sender, EventArgs e)
+        {
+            Form12 vv = new Form12();
+            vv.Show();
+            timer3.Start();
+        }
+
+        private void bunifuLabel4_MouseLeave(object sender, EventArgs e)
+        {
+            bunifuLabel4.ForeColor = Color.Magenta;
+        }
+
+        private void bunifuLabel4_MouseHover(object sender, EventArgs e)
+        {
+            bunifuLabel4.ForeColor = Color.DarkBlue;
+        }
+
+        private void bunifuLabel5_MouseHover(object sender, EventArgs e)
+        {
+            bunifuLabel5.ForeColor = Color.DarkBlue;
+        }
+
+        
+
+        private void bunifuLabel5_MouseLeave(object sender, EventArgs e)
+        {
+            bunifuLabel5.ForeColor = Color.Magenta;
         }
     }
 }

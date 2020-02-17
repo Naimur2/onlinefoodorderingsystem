@@ -21,10 +21,10 @@ namespace WindowsFormsApplication2
                  int nWidthEllipse, // width of ellipse
                  int nHeightEllipse // height of ellipse
              );
-        public Form12(string ms)
+        public Form12()
         {
             InitializeComponent();
-            label1.Text = ms;
+            
         }
         int count = 0;
         private void Form12_Load(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace WindowsFormsApplication2
 
                 timer1.Stop();
 
-                Form13 nn = new Form13(label1.Text);
+                Form15 nn = new Form15();
                 nn.Show();
                 this.Hide();
             }

@@ -13,12 +13,12 @@ namespace WindowsFormsApplication2
 {
     public partial class Form13 : Form
     {
-        public Form13(string ms)
+        public Form13()
         {
             InitializeComponent();
          
         }
-        MySqlConnection con = new MySqlConnection("server=localhost;database=foodbank;username=root;password=;");
+        MySqlConnection con = new MySqlConnection(Cryptography.con());
         private void Form13_Load(object sender, EventArgs e)
         {
             timer1.Start();
@@ -79,8 +79,8 @@ namespace WindowsFormsApplication2
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form14 v = new Form14();
-            v.Show();
+           
+       
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -120,22 +120,22 @@ namespace WindowsFormsApplication2
 
         private void timer6_Tick(object sender, EventArgs e)
         {
-            bunifuLabel7.Visible = false;
+         
         }
 
         private void timer7_Tick(object sender, EventArgs e)
         {
-            bunifuLabel9.Visible = false;
+           
         }
 
         private void timer8_Tick(object sender, EventArgs e)
         {
-            bunifuLabel10.Visible = false;
+           
         }
 
         private void timer9_Tick(object sender, EventArgs e)
         {
-            bunifuLabel11.Visible = false;
+           
         }
 
         private void bunifuButton7_Click(object sender, EventArgs e)
@@ -148,6 +148,22 @@ namespace WindowsFormsApplication2
         private void bunifuLabel13_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuButton2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            Form8 vv = new Form8();
+            vv.Show();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }
