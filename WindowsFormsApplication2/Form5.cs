@@ -22,6 +22,36 @@ namespace WindowsFormsApplication2
         MySqlConnection con = new MySqlConnection(Cryptography.con());
         
         Regex mg;
+
+
+public void details(int foodn,Label money,Label foodname,Label details ,PictureBox ima)
+        {
+            String query = "SELECT * FROM food where foodno='"+foodn+"'";
+            MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            data.Fill(dt);
+            money.Text = dt.Rows[0][2].ToString();
+            foodname.Text = dt.Rows[0][1].ToString();
+            details.Text = dt.Rows[0][3].ToString() + "\r\n" + dt.Rows[0][5].ToString();
+            if (dt.Rows[0][4] != null)
+            {
+                try
+                {
+                    byte[] img1 = (byte[])dt.Rows[0][4];
+                    MemoryStream ms1 = new MemoryStream(img1);
+                    ima.Image = Image.FromStream(ms1);
+
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error");
+                }
+            }
+        }
+
+
+
         private void Form5_Load(object sender, EventArgs e)
         {
 
@@ -606,120 +636,17 @@ namespace WindowsFormsApplication2
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            String query1 = "SELECT * from orders where username='" + this.ree.Text + "' and foodno=1";
-            MySqlDataAdapter data1 = new MySqlDataAdapter(query1, con);
-            DataTable dt1 = new DataTable();
-            data1.Fill(dt1);
-            if (dt1.Rows.Count > 0)
-
-
-            {
-                unlike1.BackColor = Color.LightBlue;
-                like1.BackColor = Color.Aqua;
-                MySqlCommand cm = new MySqlCommand();
-                cm.Connection = con;
-                cm.CommandText = "update ratings set like1=0,unlike1=1 where username='" + this.ree.Text + "'";
-
-                con.Open();
-                cm.ExecuteNonQuery();
-                con.Close();
-                string query = "select sum(like1),sum(unlike1) from ratings ";
-
-                MySqlDataAdapter data = new MySqlDataAdapter(query, con);
-
-                DataTable dt = new DataTable();
-
-                data.Fill(dt);
-                label2.Text = dt.Rows[0][0].ToString();
-                label3.Text = dt.Rows[0][1].ToString();
-            }
-            else
-            {
-
-
-                MessageBox.Show("Please oreder this food to give your opinion");
-
-            }
+            
         }
 
         private void pictureBox7_Click_1(object sender, EventArgs e)
         {
-            String query1 = "SELECT * from orders where username='" + this.ree.Text + "' and foodno=2";
-            MySqlDataAdapter data1 = new MySqlDataAdapter(query1, con);
-            DataTable dt1 = new DataTable();
-            data1.Fill(dt1);
-            if (dt1.Rows.Count > 0)
-
-
-            {
-
-                like2.BackColor = Color.LightBlue;
-                unlike2.BackColor = Color.Aqua;
-                MySqlCommand cm = new MySqlCommand();
-                cm.Connection = con;
-                cm.CommandText = "update ratings set like2=1,unlike2=0 where username='" + this.ree.Text + "'";
-
-                con.Open();
-                cm.ExecuteNonQuery();
-                con.Close();
-                string query = "select sum(like2),sum(unlike2) from ratings ";
-
-                MySqlDataAdapter data = new MySqlDataAdapter(query, con);
-
-                DataTable dt = new DataTable();
-
-                data.Fill(dt);
-                label5.Text = dt.Rows[0][0].ToString();
-                label4.Text = dt.Rows[0][1].ToString();
-
-
-
-            }
-            else
-            {
-
-
-                MessageBox.Show("Please oreder this food to give your opinion");
-
-            }
+            
         }
 
         private void pictureBox5_Click_1(object sender, EventArgs e)
         {
-            String query1 = "SELECT * from orders where username='" + this.ree.Text + "' and foodno=2";
-            MySqlDataAdapter data1 = new MySqlDataAdapter(query1, con);
-            DataTable dt1 = new DataTable();
-            data1.Fill(dt1);
-            if (dt1.Rows.Count > 0)
-
-
-            {
-                unlike2.BackColor = Color.LightBlue;
-                like2.BackColor = Color.Aqua;
-                MySqlCommand cm = new MySqlCommand();
-                cm.Connection = con;
-                cm.CommandText = "update ratings set like2=0,unlike2=1 where username='" + this.ree.Text + "'";
-
-                con.Open();
-                cm.ExecuteNonQuery();
-                con.Close();
-                string query = "select sum(like2),sum(unlike2) from ratings";
-
-                MySqlDataAdapter data = new MySqlDataAdapter(query, con);
-
-                DataTable dt = new DataTable();
-
-                data.Fill(dt);
-                label5.Text = dt.Rows[0][0].ToString();
-                label4.Text = dt.Rows[0][1].ToString();
-            }
-            else
-            {
-
-
-                MessageBox.Show("Please oreder this food to give your opinion");
-
-            }
+           
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
@@ -2128,6 +2055,166 @@ namespace WindowsFormsApplication2
             }
             else
             {
+
+            }
+        }
+
+        private void like1_Click(object sender, EventArgs e)
+        {
+            String query1 = "SELECT * from orders where username='" + this.ree.Text + "' and foodno=2";
+            MySqlDataAdapter data1 = new MySqlDataAdapter(query1, con);
+            DataTable dt1 = new DataTable();
+            data1.Fill(dt1);
+            if (dt1.Rows.Count > 0)
+
+
+            {
+
+                like1.BackColor = Color.LightBlue;
+                unlike1.BackColor = Color.Aqua;
+                MySqlCommand cm = new MySqlCommand();
+                cm.Connection = con;
+                cm.CommandText = "update ratings set like1=1,unlike1=0 where username='" + this.ree.Text + "'";
+
+                con.Open();
+                cm.ExecuteNonQuery();
+                con.Close();
+                string query = "select sum(like1),sum(unlike1) from ratings ";
+
+                MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+
+                DataTable dt = new DataTable();
+
+                data.Fill(dt);
+                label3.Text = dt.Rows[0][0].ToString();
+                label2.Text = dt.Rows[0][1].ToString();
+
+
+
+            }
+            else
+            {
+
+
+                MessageBox.Show("Please oreder this food to give your opinion");
+
+            }
+        }
+
+        private void unlike1_Click(object sender, EventArgs e)
+        {
+            String query1 = "SELECT * from orders where username='" + this.ree.Text + "' and foodno=1";
+            MySqlDataAdapter data1 = new MySqlDataAdapter(query1, con);
+            DataTable dt1 = new DataTable();
+            data1.Fill(dt1);
+            if (dt1.Rows.Count > 0)
+
+
+            {
+                unlike1.BackColor = Color.LightBlue;
+                like1.BackColor = Color.Aqua;
+                MySqlCommand cm = new MySqlCommand();
+                cm.Connection = con;
+                cm.CommandText = "update ratings set like1=0,unlike1=1 where username='" + this.ree.Text + "'";
+
+                con.Open();
+                cm.ExecuteNonQuery();
+                con.Close();
+                string query = "select sum(like1),sum(unlike1) from ratings ";
+
+                MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+
+                DataTable dt = new DataTable();
+
+                data.Fill(dt);
+                label2.Text = dt.Rows[0][0].ToString();
+                label3.Text = dt.Rows[0][1].ToString();
+            }
+            else
+            {
+
+
+                MessageBox.Show("Please oreder this food to give your opinion");
+
+            }
+        }
+
+        private void unlike2_Click(object sender, EventArgs e)
+        {
+            String query1 = "SELECT * from orders where username='" + this.ree.Text + "' and foodno=2";
+            MySqlDataAdapter data1 = new MySqlDataAdapter(query1, con);
+            DataTable dt1 = new DataTable();
+            data1.Fill(dt1);
+            if (dt1.Rows.Count > 0)
+
+
+            {
+                unlike2.BackColor = Color.LightBlue;
+                like2.BackColor = Color.Aqua;
+                MySqlCommand cm = new MySqlCommand();
+                cm.Connection = con;
+                cm.CommandText = "update ratings set like2=0,unlike2=1 where username='" + this.ree.Text + "'";
+
+                con.Open();
+                cm.ExecuteNonQuery();
+                con.Close();
+                string query = "select sum(like2),sum(unlike2) from ratings";
+
+                MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+
+                DataTable dt = new DataTable();
+
+                data.Fill(dt);
+                label5.Text = dt.Rows[0][0].ToString();
+                label4.Text = dt.Rows[0][1].ToString();
+            }
+            else
+            {
+
+
+                MessageBox.Show("Please oreder this food to give your opinion");
+
+            }
+        }
+
+        private void like2_Click(object sender, EventArgs e)
+        {
+            String query1 = "SELECT * from orders where username='" + this.ree.Text + "' and foodno=2";
+            MySqlDataAdapter data1 = new MySqlDataAdapter(query1, con);
+            DataTable dt1 = new DataTable();
+            data1.Fill(dt1);
+            if (dt1.Rows.Count > 0)
+
+
+            {
+
+                like2.BackColor = Color.LightBlue;
+                unlike2.BackColor = Color.Aqua;
+                MySqlCommand cm = new MySqlCommand();
+                cm.Connection = con;
+                cm.CommandText = "update ratings set like2=1,unlike2=0 where username='" + this.ree.Text + "'";
+
+                con.Open();
+                cm.ExecuteNonQuery();
+                con.Close();
+                string query = "select sum(like2),sum(unlike2) from ratings ";
+
+                MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+
+                DataTable dt = new DataTable();
+
+                data.Fill(dt);
+                label5.Text = dt.Rows[0][0].ToString();
+                label4.Text = dt.Rows[0][1].ToString();
+
+
+
+            }
+            else
+            {
+
+
+                MessageBox.Show("Please oreder this food to give your opinion");
 
             }
         }

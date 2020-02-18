@@ -644,5 +644,22 @@ namespace WindowsFormsApplication2
 
 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            panel3.Height = button2.Height;
+            panel3.Top = button2.Top;
+            label5.Text = "2";
+            food(2, 2);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            panel3.Height = button1.Height;
+            panel3.Top = button1.Top;
+            label5.Text = "1";
+            food(1, 1);
+
+        }
     }
 }

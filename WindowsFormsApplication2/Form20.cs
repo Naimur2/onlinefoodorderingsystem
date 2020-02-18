@@ -15,6 +15,7 @@ namespace WindowsFormsApplication2
         public Form20(string mm)
         {
             InitializeComponent();
+            customize();
             label1.Text = mm;
         }
         MySqlConnection con = new MySqlConnection(Cryptography.con());
@@ -33,6 +34,39 @@ namespace WindowsFormsApplication2
             childForm.BringToFront();
             childForm.Show();
         }
+
+        private void customize()
+        {
+            panelfood.Visible = false;
+            panelaccount.Visible = false;
+           
+        }
+        private void hideSubMenu()
+        {
+            if (panelfood.Visible == true)
+                panelaccount.Visible = false;
+            if (panelaccount.Visible == true)
+                panelfood.Visible = false;
+           
+        }
+
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+
+
+
+
+
+
+
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             openChildFormInPanel(new Form5(label1.Text));
@@ -71,6 +105,121 @@ namespace WindowsFormsApplication2
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             log.logout(this);
+        }
+
+        private void panel3_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bunifuButton4_MouseHover(object sender, EventArgs e)
+        {
+            panelfood.Height = 244;
+        }
+
+        private void bunifuButton4_MouseLeave(object sender, EventArgs e)
+        {
+            panelfood.Height = 61;
+        }
+
+        private void bunifuButton8_Click(object sender, EventArgs e)
+        {
+            if(panelaccount.Visible==false && panelfood.Visible==false)
+            {
+
+                panelaccount.Visible = true;
+                panelfood.Visible = false;
+
+            }
+        else    if (panelaccount.Visible == false && panelfood.Visible == true)
+            {
+
+                panelaccount.Visible = true;
+                panelfood.Visible = false;
+
+            }
+         else   if (panelaccount.Visible == true && panelfood.Visible == false)
+            {
+
+                panelaccount.Visible = false;
+                panelfood.Visible = false;
+
+            }
+
+        }
+
+        private void bunifuButton4_Click(object sender, EventArgs e)
+        {
+            if(panelfood.Visible==false && panelaccount.Visible==true)
+            {
+                panelfood.Visible = true;
+                panelaccount.Visible = false;
+            }
+            else
+                if (panelfood.Visible == true && panelaccount.Visible == false)
+            {
+                panelfood.Visible = false;
+                panelaccount.Visible = false;
+            }
+            else
+                if (panelfood.Visible == false && panelaccount.Visible == false)
+            {
+                panelfood.Visible = true;
+                panelaccount.Visible = false;
+            }
+
+        }
+
+        private void bunifuButton10_Click(object sender, EventArgs e)
+        {
+            if (panelfood.Visible == false && panelaccount.Visible == false)
+            {
+                panelfood.Visible = false;
+                panelaccount.Visible = false;
+            }
+            else
+               if (panelfood.Visible == true || panelaccount.Visible == true)
+            {
+                panelfood.Visible = false;
+                panelaccount.Visible = false;
+            }
+            openChildFormInPanel(new Form11(label1.Text));
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new Form7(label1.Text));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new Form5(label1.Text));
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new changepass(label1.Text, "customer"));
+        }
+
+        private void bunifuButton11_Click(object sender, EventArgs e)
+        {
+            if (panelfood.Visible == false && panelaccount.Visible == false)
+            {
+                panelfood.Visible = false;
+                panelaccount.Visible = false;
+            }
+            else
+                 if (panelfood.Visible == true || panelaccount.Visible == true)
+            {
+                panelfood.Visible = false;
+                panelaccount.Visible = false;
+            }
+            openChildFormInPanel(new Form19("customer"));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new Form21(label1.Text));
         }
     }
 }

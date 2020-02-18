@@ -147,4 +147,13 @@
   <data name="bunifuLabel8.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Century Gothic'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuButton5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAMwAAAAhCAYAAACV+ESuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB+SURBVHhe7dOxEYBADAQxl0pnXwp0Bk/MztCAAjnYiz1z
+        zjHX3MCP91dyAFpGoGUEWkagZQRaRqBlBFpGoGUEWkagZQRaRqBlBFpGoGUEWkagZQRaRqBlBFpGoGUE
+        WkagZQRaRqBlBFpGoGUEWkagZQRaRqBlBNo+6xOBMOsBXBbrWH79/LsAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

@@ -118,17 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: #15428B; text-align: left; }</value>
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: Navy; text-align: left; }</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bunifuButton5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQwAAAApCAYAAADAmheiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD9SURBVHhe7daxTQQxEIbRDWkHuwBSQkqgBMLzXgAZpdAA
-        2OGVQAmUQEh47IKQDsnBX8Ab6UmWZuJPXva5PrzelrWf6jrOAJf2NpR13P/Eora3u3qcHwL8KYf+sJQ2
-        3mdLgH/a+FymC4AJwQBiggHEBAOICQYQEwwgJhhATDCAmGAAMcEAYoIBxAQDiAkGEBMMICYYQEwwgJhg
-        ADHBAGKCAcQEA4gJBhATDCAmGEBMMICYYAAxwQBiggHEBAOICQYQEwwgJhhATDCAmGAAMcEAYoIBxLZg
-        9I/ZAuBSaf1rqW081eP8AOBXP5d1vCz7bI/n+RHA9rvYYnHzeLr6BgtiafhgMDuIAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADPSURBVHhe7dSxTQQxEEDRCSmNkBIogRLIKOXK8HZACZRA
+        SHgsJ5107P4Snq1nWX8ce25rzfNs+7nNFeBg7fv1/lm8xAOA/9a8zX75PA0Azr7/PowaAJxlBCgZAUpG
+        gJIRoGQEKBkBSkaAkhGgZAQoGQFKRoCSEaBkBCgZAUpGgJIRoGQEKBkBSkaAkhGgZAQoGQFKRoCSEaBk
+        BCgZAUpGgJIRoGQEKBkBSkaAkhGgZAQoGQHKfnydIsDZz8ya9xgAHF3mtrb5OAwAHl1mzdMvj9jrDl/9
+        vH0AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="bunifuPictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -44,7 +46,34 @@ namespace WindowsFormsApplication2
 
             }
         }
-      
+
+        public static void details(int foodn, Label money, Label foodname, Label details, PictureBox ima)
+        {
+            MySqlConnection con = new MySqlConnection(Cryptography.con());
+
+            String query = "SELECT * FROM food where foodno='" + foodn + "'";
+            MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            data.Fill(dt);
+            money.Text = dt.Rows[0][2].ToString();
+            foodname.Text = dt.Rows[0][1].ToString();
+            details.Text = dt.Rows[0][3].ToString() + "\r\n" + dt.Rows[0][5].ToString();
+            if (dt.Rows[0][4] != null)
+            {
+                try
+                {
+                    byte[] img1 = (byte[])dt.Rows[0][4];
+                    MemoryStream ms1 = new MemoryStream(img1);
+                    ima.Image = Image.FromStream(ms1);
+
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error");
+                }
+            }
+        }
 
 
 
@@ -52,7 +81,7 @@ namespace WindowsFormsApplication2
 
 
 
-       public static Form activeForm = null;
+        public static Form activeForm = null;
        public static void openchild(Form childForm,Panel p)
         {
             if (activeForm != null)

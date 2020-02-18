@@ -67,7 +67,11 @@ namespace WindowsFormsApplication2
                 panel1.Visible = false;
 
             }
-
+            int k = DataGridView1.Rows.Count;
+            if (k != 0)
+            {
+                DataGridView1_CellClick(this.DataGridView1, new DataGridViewCellEventArgs(0, 0));
+            }
         }
         public void grid()
         {
@@ -159,36 +163,7 @@ namespace WindowsFormsApplication2
                 MessageBox.Show("Please Select status","Error",MessageBoxButtons.OK,MessageBoxIcon.Hand);
 
             }
-            else if(username.Text=="")
-            {
-
-                MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            }
-            else if (Foodname.Text == "")
-            {
-
-                MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            }
-            else if (quantity.Text == "")
-            {
-
-                MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            }
-            else if (Address.Text == "")
-            {
-
-                MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            }
-            else if (time.Text == "")
-            {
-
-                MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            }
-            else if (textBox1.Text == "")
-            {
-
-                MessageBox.Show("Please write some message", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            }
+       
             else
             {
 
@@ -201,8 +176,7 @@ namespace WindowsFormsApplication2
 
                     if (comboBox1.Text == "Delivered")
                     {
-                        string Body = "Hi " + username.Text + " " + "Your order in asterisk food of " + quantity.Text + " " + "pice of" + Foodname.Text + " " + "is delivered in your address:" + Address.Text + "\r\n" + "Thank you, Team asterisk";
-                        int i = Int32.Parse(label2.Text);
+                        int i = Int32.Parse(username.Text);
                         string aa = comboBox1.Text;
 
                         MySqlCommand cm = new MySqlCommand();
@@ -223,10 +197,8 @@ namespace WindowsFormsApplication2
                     }
                     else if (comboBox1.Text == "Invalid address")
                     {
-                        string Body = "Hi " + username.Text + " " + "We could not deliver your food beasuse there is no valid address of you,please provide valid address and phone number " + "Thank you, Team asterisk";
                         int i = Int32.Parse(label2.Text);
                         string aa = comboBox1.Text;
-                     
                         MySqlCommand cm = new MySqlCommand();
                         cm.Connection = con;
                         cm.CommandText = " UPDATE `orders` SET `status` = '" + this.comboBox1.Text + "', `Message` = '" + textBox1.Text + "' WHERE `orders`.`ord_no` = '" + i + "'";
@@ -270,7 +242,7 @@ namespace WindowsFormsApplication2
                 }
                 catch(Exception ex)
                 {
-
+                    MessageBox.Show("Error");
                 }
             }
         }
@@ -439,14 +411,10 @@ namespace WindowsFormsApplication2
 
                     MessageBox.Show("Data updated");
 
-
-
-                    string queryb = "SELECT orders.ord_no as SI,customer.address,food.foodname as food,orders.amount as Quantity,orders.tk as Tk,orders.status as Status,orders.Date as Date,orders.Time as Time from customer,orders,food Where orders.foodno=food.foodno and orders.username=customer.username and orders.status='OnThrway ' order by ord_no desc";
-                    MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
-                    DataTable zz = new DataTable();
-                    dataa.Fill(zz);
-                    DataGridView1.DataSource = zz;
                     comboBox2.Text = "Ontheway";
+
+
+
                 }
                 catch (Exception x)
                 {

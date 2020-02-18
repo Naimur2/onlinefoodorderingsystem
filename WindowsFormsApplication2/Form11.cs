@@ -28,15 +28,11 @@ namespace WindowsFormsApplication2
             timer2.Start();
             label72.Text = DateTime.Now.ToShortDateString();
             label73.Text = DateTime.Now.ToShortTimeString();
-
-            string queryb = "SELECT orders.ord_no as SI, customer.address as Address, food.foodname as food, orders.amount as Quantity, orders.tk as Tk, orders.status as Status, orders.Date as Date, orders.Time as Time,orders.message from customer,orders,food Where orders.foodno=food.foodno and customer.username='" + user + "' and orders.username='" + user + "' order by ord_no desc";
-
-            MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
-            DataTable zz = new DataTable();
-
-            dataa.Fill(zz);
-            DataGridView1.DataSource=zz;
-
+            int k = DataGridView1.Rows.Count;
+            if (k != 0)
+            {
+                DataGridView1_CellClick(this.DataGridView1, new DataGridViewCellEventArgs(0, 0));
+            }
 
         }
 
@@ -111,7 +107,7 @@ namespace WindowsFormsApplication2
            
             if (DataGridView1.Rows.Count != 0)
             {
-
+                panel1.Visible = false;
                 si.Text = DataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
                 Foodname.Text = DataGridView1.SelectedRows[0].Cells[2].Value + string.Empty;
                 quantity.Text = DataGridView1.SelectedRows[0].Cells[3].Value + string.Empty;
@@ -177,6 +173,36 @@ namespace WindowsFormsApplication2
                 panel1.Visible = true;
 
             }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if(textBox2.Text=="Delivered")
+            {
+                bunifuLabel10.Visible = true;
+                bunifuLabel11.Visible = true;
+                checkbox1.Visible = true;
+                checkbox2.Visible = true;
+                bunifuButton5.Visible = true;
+            }
+            else
+            {
+                bunifuLabel10.Visible = false;
+                bunifuLabel11.Visible = false;
+                checkbox1.Visible = false;
+                checkbox2.Visible = false;
+                bunifuButton5.Visible = false;
+            }
+        }
+
+        private void checkbox1_OnChange(object sender, EventArgs e)
+        {
+            checkbox2.Checked = false;
+        }
+
+        private void checkbox2_OnChange(object sender, EventArgs e)
+        {
+            checkbox1.Checked = false;
         }
     }
 }

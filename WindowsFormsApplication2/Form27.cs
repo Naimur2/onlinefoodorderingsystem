@@ -22,6 +22,11 @@ namespace WindowsFormsApplication2
         private void Form27_Load(object sender, EventArgs e)
         {
             comboBox2.Text = "Pending";
+            int k = DataGridView1.Rows.Count;
+            if (k != 0)
+            {
+                DataGridView1_CellClick(this.DataGridView1, new DataGridViewCellEventArgs(0, 0));
+            }
 
         }
 
@@ -83,7 +88,7 @@ namespace WindowsFormsApplication2
             for (int j = 0; j < i; j++)
             {
 
-                cc.Rows.Add(Cryptography.Decrypt(zz.Rows[j][0].ToString()), zz.Rows[j][1].ToString(), zz.Rows[j][1].ToString());
+                cc.Rows.Add(zz.Rows[j][0].ToString(), zz.Rows[j][1].ToString(), zz.Rows[j][1].ToString());
 
             }
             DataGridView1.DataSource = cc;

@@ -47,22 +47,47 @@ namespace WindowsFormsApplication2
         {
             string usernam = Cryptography.Encrypt(username.Text);
             string mail= Cryptography.Encrypt(email.Text);
-            string query = " select* FROM manager,customer,admin,deliveryboy where customer.username = '" + usernam + "' and manager.mid = '" + usernam + "' and admin.masterid = '" + usernam + "' and deliveryboy.user = '" + usernam + "'";
-           
-            string query2 = "select * from customer,manager,admin,deliveryboy where  customer.email='" + mail + "' and manager.memail='" + mail + "' and deliveryboy.demail ='" + mail + "' and admin.mastermail='" + mail + "' ";
-           
+
+
+
+            string query = " select* FROM customer where username = '" + usernam + "'";
             MySqlDataAdapter data = new MySqlDataAdapter(query, con);
-            MySqlDataAdapter data2 = new MySqlDataAdapter(query2, con);
-      
             DataTable dt = new DataTable();
-            DataTable dt2 = new DataTable();
-        
             data.Fill(dt);
+
+            string query1 = " select* FROM manager where mid = '" + usernam + "'";
+            MySqlDataAdapter data1 = new MySqlDataAdapter(query1, con);
+            DataTable dt1 = new DataTable();
+            data.Fill(dt1);
+
+            string query11 = " select* FROM admin where masterid = '" + usernam + "'";
+            MySqlDataAdapter data11 = new MySqlDataAdapter(query11, con);
+            DataTable dt11 = new DataTable();
+            data.Fill(dt11);
+
+            string query12 = " select* FROM deliveryboy where user = '" + usernam + "'";
+            MySqlDataAdapter data12 = new MySqlDataAdapter(query12, con);
+            DataTable dt12 = new DataTable();
+            data.Fill(dt12);
+
+
+
+
+            string query2 = "select * from customer,manager,admin,deliveryboy where  customer.email='" + mail + "' and manager.memail='" + mail + "' and deliveryboy.demail ='" + mail + "' and admin.mastermail='" + mail + "' ";
+            MySqlDataAdapter data2 = new MySqlDataAdapter(query2, con);
+            DataTable dt2 = new DataTable();
             data2.Fill(dt2);
-        
+
+
+
+
+
+
+
+
             Regex mRegxExpression = new Regex("^[a-zA -Z0-9_]{4,16}@[a-z0-9A-Z_]{2,10}.[a-z.A-Z0-9]{2,6}$");
 
-            if (dt.Rows.Count == 1)
+            if (dt.Rows.Count == 1|| dt1.Rows.Count == 1 || dt11.Rows.Count == 1 || dt12.Rows.Count == 1)
             {
 
                 MessageBox.Show("Account already Exist,Please choose different username", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
