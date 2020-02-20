@@ -16,7 +16,7 @@ namespace WindowsFormsApplication2
         public myshop(string ms)
         {
             InitializeComponent();
-            label1.Text = ms;
+           
         }
 
 
@@ -82,22 +82,17 @@ namespace WindowsFormsApplication2
             imageColumn = (DataGridViewImageColumn)DataGridView1.Columns[4];
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
 
-            label72.Text = DateTime.Now.ToShortDateString();
-            label73.Text = DateTime.Now.ToShortTimeString();
+          
         }
 
         private void bunifuButton3_Click(object sender, EventArgs e)
         {
-            Form17 oo = new Form17("b",label1.Text);
-            oo.Show();
-            timer2.Start();
+           
         }
 
         private void bunifuButton2_Click(object sender, EventArgs e)
         { 
-            Form17 oo = new Form17("c",label1.Text);
-            oo.Show();
-            timer2.Start();
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

@@ -247,6 +247,7 @@
     <Compile Include="changepass.Designer.cs">
       <DependentUpon>changepass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="Cryptography.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -618,6 +619,7 @@
   <ItemGroup>
     <Content Include="libs\ChangeLogAboutLibrary.dll" />
     <Content Include="ReadMe.Coding4Fun.Toolkit.txt" />
+    <None Include="Resources\gfdgf2.png" />
     <Content Include="Scripts\LICENSE.txt" />
     <Content Include="Scripts\polymer-micro.html" />
     <Content Include="Scripts\polymer-mini.html" />

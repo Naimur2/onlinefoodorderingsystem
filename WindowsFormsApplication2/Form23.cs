@@ -14,36 +14,133 @@ namespace WindowsFormsApplication2
         public Form23(string bb)
         {
             InitializeComponent();
-            label.Text = bb;
+            customize();
+            label1.Text = bb;
+        }
+        private void Form23_Load(object sender, EventArgs e)
+        {
+
+
+        }
+        private void customize()
+        {
+            panelfood.Visible = false;
+            panelaccount.Visible = false;
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            log.openchild(new Form19("manager"), panel2);
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            log.Exit();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            log.logout(this);
+            log.openchild(new myshop(label1.Text), panel2); 
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            log.openchild(new changepass(label.Text, "deliveryboy"), panel3);
-            b1.Enabled = true;
-            b2.Enabled = false;
+            if (panelfood.Visible == false && panelaccount.Visible == false)
+            {
+                panelfood.Visible = false;
+                panelaccount.Visible = false;
+            }
+            else
+                 if (panelfood.Visible == true || panelaccount.Visible == true)
+            {
+                panelfood.Visible = false;
+                panelaccount.Visible = false;
+            }
+            log.openchild(new Form14(label1.Text), panel2);
         }
 
-        private void b1_Click(object sender, EventArgs e)
+        private void bunifuButton11_Click(object sender, EventArgs e)
         {
-            log.openchild(new Form27(label.Text), panel3);
-            b1.Enabled = false;
-            b2.Enabled = true;
+            if (panelfood.Visible == false && panelaccount.Visible == false)
+            {
+                panelfood.Visible = false;
+                panelaccount.Visible = false;
+            }
+            else
+                 if (panelfood.Visible == true || panelaccount.Visible == true)
+            {
+                panelfood.Visible = false;
+                panelaccount.Visible = false;
+            }
+            log.openchild(new Form16(label1.Text), panel2);
         }
 
-        private void Form23_Load(object sender, EventArgs e)
+        private void bunifuButton2_Click(object sender, EventArgs e)
         {
-            b1_Click((object)sender, (EventArgs)e);
+            if (panelfood.Visible == false && panelaccount.Visible == false)
+            {
+                panelfood.Visible = false;
+                panelaccount.Visible = false;
+            }
+            else
+                 if (panelfood.Visible == true || panelaccount.Visible == true)
+            {
+                panelfood.Visible = false;
+                panelaccount.Visible = false;
+            }
+            log.openchild(new Form24(label1.Text), panel2);
         }
-    }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            log.openchild(new Form22(label1.Text), panel2);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            log.openchild(new Form25(label1.Text), panel2);
+
+        }
+
+        private void bunifuButton4_Click(object sender, EventArgs e)
+        {
+            if (panelfood.Visible == false && panelaccount.Visible == true)
+            {
+                panelfood.Visible = true;
+                panelaccount.Visible = false;
+            }
+            else
+               if (panelfood.Visible == true && panelaccount.Visible == false)
+            {
+                panelfood.Visible = false;
+                panelaccount.Visible = false;
+            }
+            else
+               if (panelfood.Visible == false && panelaccount.Visible == false)
+            {
+                panelfood.Visible = true;
+                panelaccount.Visible = false;
+            }
+        }
+
+        private void bunifuButton8_Click(object sender, EventArgs e)
+        {
+            if (panelaccount.Visible == false && panelfood.Visible == false)
+            {
+
+                panelaccount.Visible = true;
+                panelfood.Visible = false;
+
+            }
+            else if (panelaccount.Visible == false && panelfood.Visible == true)
+            {
+
+                panelaccount.Visible = true;
+                panelfood.Visible = false;
+
+            }
+            else if (panelaccount.Visible == true && panelfood.Visible == false)
+            {
+
+                panelaccount.Visible = false;
+                panelfood.Visible = false;
+
+            }
+        }
+        }
 }

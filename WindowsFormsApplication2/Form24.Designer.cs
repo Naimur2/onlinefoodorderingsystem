@@ -57,7 +57,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -67,12 +66,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -103,7 +103,7 @@
             this.panel1.Controls.Add(this.t3);
             this.panel1.Controls.Add(this.t2);
             this.panel1.Controls.Add(this.t1);
-            this.panel1.Location = new System.Drawing.Point(344, 40);
+            this.panel1.Location = new System.Drawing.Point(344, 23);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(527, 583);
             this.panel1.TabIndex = 152;
@@ -117,6 +117,7 @@
             this.bunifuButton3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton3.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton3.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton3.ForeColor = System.Drawing.Color.White;
             this.bunifuButton3.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.bunifuButton3.IconPadding = 10;
@@ -150,22 +151,23 @@
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton1.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton1.ForeColor = System.Drawing.Color.White;
             this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.bunifuButton1.IconPadding = 10;
             this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.Navy;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bunifuButton1.IdleBorderRadius = 1;
             this.bunifuButton1.IdleBorderThickness = 0;
-            this.bunifuButton1.IdleFillColor = System.Drawing.Color.Navy;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.Location = new System.Drawing.Point(131, 465);
             this.bunifuButton1.Name = "bunifuButton1";
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(250)))), ((int)(((byte)(0)))));
             stateProperties2.BorderRadius = 1;
             stateProperties2.BorderThickness = 1;
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(250)))), ((int)(((byte)(0)))));
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
             this.bunifuButton1.onHoverState = stateProperties2;
@@ -259,7 +261,9 @@
             // t6
             // 
             this.t6.BackColor = System.Drawing.SystemColors.Window;
-            this.t6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.t6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.t6.Location = new System.Drawing.Point(131, 414);
             this.t6.MaxLength = 30;
             this.t6.Multiline = true;
@@ -270,7 +274,9 @@
             // t5
             // 
             this.t5.BackColor = System.Drawing.SystemColors.Window;
-            this.t5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.t5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.t5.Location = new System.Drawing.Point(131, 364);
             this.t5.MaxLength = 30;
             this.t5.Multiline = true;
@@ -281,7 +287,9 @@
             // t4
             // 
             this.t4.BackColor = System.Drawing.SystemColors.Window;
-            this.t4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.t4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.t4.Location = new System.Drawing.Point(131, 307);
             this.t4.MaxLength = 30;
             this.t4.Multiline = true;
@@ -292,7 +300,9 @@
             // t3
             // 
             this.t3.BackColor = System.Drawing.SystemColors.Window;
-            this.t3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.t3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.t3.Location = new System.Drawing.Point(131, 249);
             this.t3.MaxLength = 30;
             this.t3.Multiline = true;
@@ -303,7 +313,9 @@
             // t2
             // 
             this.t2.BackColor = System.Drawing.SystemColors.Window;
-            this.t2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.t2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.t2.Location = new System.Drawing.Point(131, 194);
             this.t2.MaxLength = 30;
             this.t2.Multiline = true;
@@ -314,7 +326,9 @@
             // t1
             // 
             this.t1.BackColor = System.Drawing.SystemColors.Window;
-            this.t1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.t1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.t1.Location = new System.Drawing.Point(131, 139);
             this.t1.MaxLength = 30;
             this.t1.Multiline = true;
@@ -326,7 +340,9 @@
             // t7
             // 
             this.t7.BackColor = System.Drawing.SystemColors.Window;
-            this.t7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.t7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t7.ForeColor = System.Drawing.Color.Navy;
             this.t7.Location = new System.Drawing.Point(148, 147);
             this.t7.MaxLength = 30;
             this.t7.Multiline = true;
@@ -337,7 +353,9 @@
             // t8
             // 
             this.t8.BackColor = System.Drawing.SystemColors.Window;
-            this.t8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.t8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t8.ForeColor = System.Drawing.Color.Navy;
             this.t8.Location = new System.Drawing.Point(148, 213);
             this.t8.MaxLength = 12;
             this.t8.Multiline = true;
@@ -348,7 +366,9 @@
             // t9
             // 
             this.t9.BackColor = System.Drawing.SystemColors.Window;
-            this.t9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.t9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t9.ForeColor = System.Drawing.Color.Navy;
             this.t9.Location = new System.Drawing.Point(145, 279);
             this.t9.MaxLength = 12;
             this.t9.Multiline = true;
@@ -383,21 +403,6 @@
             this.label2.TabIndex = 182;
             this.label2.Text = "Retype Password:";
             // 
-            // bunifuPictureBox2
-            // 
-            this.bunifuPictureBox2.AllowFocused = false;
-            this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox2.BorderRadius = 50;
-            this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
-            this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(228, 22);
-            this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox2.TabIndex = 184;
-            this.bunifuPictureBox2.TabStop = false;
-            this.bunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label16);
@@ -415,7 +420,7 @@
             this.panel2.Controls.Add(this.t9);
             this.panel2.Controls.Add(this.t8);
             this.panel2.Controls.Add(this.t7);
-            this.panel2.Location = new System.Drawing.Point(344, 40);
+            this.panel2.Location = new System.Drawing.Point(344, 23);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(527, 583);
             this.panel2.TabIndex = 153;
@@ -463,7 +468,9 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Navy;
             this.textBox1.Location = new System.Drawing.Point(145, 348);
             this.textBox1.MaxLength = 30;
             this.textBox1.Multiline = true;
@@ -492,6 +499,7 @@
             this.bunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton2.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton2.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton2.ForeColor = System.Drawing.Color.White;
             this.bunifuButton2.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.bunifuButton2.IconPadding = 10;
@@ -525,22 +533,23 @@
             this.bunifuButton4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.bunifuButton4.DisabledFillColor = System.Drawing.Color.Gray;
             this.bunifuButton4.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton4.ForeColor = System.Drawing.Color.White;
             this.bunifuButton4.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.bunifuButton4.IconPadding = 10;
             this.bunifuButton4.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton4.IdleBorderColor = System.Drawing.Color.Navy;
+            this.bunifuButton4.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bunifuButton4.IdleBorderRadius = 1;
             this.bunifuButton4.IdleBorderThickness = 0;
-            this.bunifuButton4.IdleFillColor = System.Drawing.Color.Navy;
+            this.bunifuButton4.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bunifuButton4.IdleIconLeftImage = null;
             this.bunifuButton4.IdleIconRightImage = null;
             this.bunifuButton4.Location = new System.Drawing.Point(145, 465);
             this.bunifuButton4.Name = "bunifuButton4";
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(250)))), ((int)(((byte)(0)))));
             stateProperties4.BorderRadius = 1;
             stateProperties4.BorderThickness = 1;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(250)))), ((int)(((byte)(0)))));
             stateProperties4.IconLeftImage = null;
             stateProperties4.IconRightImage = null;
             this.bunifuButton4.onHoverState = stateProperties4;
@@ -548,6 +557,21 @@
             this.bunifuButton4.TabIndex = 187;
             this.bunifuButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton4.Click += new System.EventHandler(this.bunifuButton4_Click);
+            // 
+            // bunifuPictureBox2
+            // 
+            this.bunifuPictureBox2.AllowFocused = false;
+            this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox2.BorderRadius = 50;
+            this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
+            this.bunifuPictureBox2.IsCircle = true;
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(228, 22);
+            this.bunifuPictureBox2.Name = "bunifuPictureBox2";
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox2.TabIndex = 184;
+            this.bunifuPictureBox2.TabStop = false;
+            this.bunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
             // label11
             // 
@@ -563,11 +587,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Aqua;
-            this.ClientSize = new System.Drawing.Size(1133, 619);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1143, 616);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -580,9 +604,9 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

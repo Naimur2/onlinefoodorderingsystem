@@ -46,6 +46,130 @@ namespace WindowsFormsApplication2
 
             }
         }
+        public static void like(int foodno,Label like,Label unlike,string data)
+        {
+            MySqlConnection con = new MySqlConnection(Cryptography.con());
+
+            string likee = "like" + foodno.ToString();
+            string unlikee = "unlike" + foodno.ToString();
+            
+            String query1 = "SELECT sum("+likee+"),sum("+unlikee+ ") FROM   "+ data;
+            MySqlDataAdapter data1 = new MySqlDataAdapter(query1, con);
+            DataTable dt1 = new DataTable();
+            data1.Fill(dt1);
+            like.Text = dt1.Rows[0][0].ToString();
+            unlike.Text = dt1.Rows[0][1].ToString();
+        }
+
+
+      
+
+
+        public static void likebutton(int foodno,string username,PictureBox like,PictureBox unlike,Label unliker,Label liker,string database)
+
+
+        {
+            MySqlConnection con = new MySqlConnection(Cryptography.con());
+
+            String query1 = "SELECT * from orders where username='" +Cryptography.Encrypt( username) + "' and foodno='" + foodno + "'";
+            MySqlDataAdapter data1 = new MySqlDataAdapter(query1, con);
+            DataTable dt1 = new DataTable();
+            data1.Fill(dt1);
+            if (dt1.Rows.Count > 0)
+
+
+            {
+                like.BackColor = Color.LightBlue;
+                unlike.BackColor = Color.Aqua;
+                MySqlCommand cm = new MySqlCommand();
+                cm.Connection = con;
+                string likee = "like"+ foodno;
+                string unlikee = "unlike"+ foodno;
+                string use = Cryptography.Encrypt(username);
+                cm.CommandText = "update ratings set  " +likee+ "=1,"+ unlikee + "=0" + "  where username='"+use+"'"  ;
+
+                con.Open();
+                cm.ExecuteNonQuery();
+                con.Close();
+
+                string query = "select sum(like" + foodno + "),sum(unlike" + foodno + " )from " + database;
+
+                MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+
+                DataTable dt = new DataTable();
+
+                data.Fill(dt);
+                liker.Text = dt.Rows[0][0].ToString();
+                unliker.Text = dt.Rows[0][1].ToString();
+
+            }
+            else
+            {
+
+
+                MessageBox.Show("Please oreder this food to give your opinion");
+
+            }
+        }
+
+
+        public static void unlikebutton(int foodno, string username, PictureBox like, PictureBox unlike, Label unliker, Label liker,string database)
+
+
+        {
+            MySqlConnection con = new MySqlConnection(Cryptography.con());
+
+            String query1 = "SELECT * from orders where username='" + Cryptography.Encrypt(username) + "' and foodno='" + foodno + "'";
+            MySqlDataAdapter data1 = new MySqlDataAdapter(query1, con);
+            DataTable dt1 = new DataTable();
+            data1.Fill(dt1);
+            if (dt1.Rows.Count > 0)
+
+
+            {
+
+                like.BackColor = Color.Aqua;
+                unlike.BackColor = Color.LightBlue;
+                MySqlCommand cm = new MySqlCommand();
+                cm.Connection = con;
+                string likee = "like" + foodno;
+                string unlikee = "unlike" + foodno;
+                string use = Cryptography.Encrypt(username);
+                cm.CommandText = "update ratings set  " + likee + "=0," + unlikee + "=1" + "  where username='" + use + "'";
+
+                con.Open();
+                cm.ExecuteNonQuery();
+                con.Close();
+
+                string query = "select sum('" + likee + "'),sum('" + unlikee + "') from " + database;
+
+                MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+
+                DataTable dt = new DataTable();
+
+                data.Fill(dt);
+                liker.Text = dt.Rows[0][0].ToString();
+                unliker.Text = dt.Rows[0][1].ToString();
+
+
+
+            }
+            else
+            {
+
+
+                MessageBox.Show("Please oreder this food to give your opinion");
+
+            }
+        }
+
+
+
+
+
+
+
+
 
         public static void details(int foodn, Label money, Label foodname, Label details, PictureBox ima)
         {

@@ -156,22 +156,26 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAI0AAAAYCAYAAADH9X5VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABtSURBVGhD7dKxDYMwAABBzxQWYg1Yhi3MeInSW4jvr7jq
-        2x+f89638/7CG/9fxirAE9OQmYbMNGSmITMNmWnITENmGjLTkJmGzDRkpiEzDZlpyExDZhoy05CZhsw0
-        ZKYhMw3Z2I55rQIsHfP6AU+NjHYwwnmPAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAS8AAAAqCAYAAADiZN3fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC3SURBVHhe7dSxEQJBEAPBC5XMPhTIDB4bBTBUtdFrjPw9
+        53ke53XeAH/j+7fmAFA3I0DdjAB1MwLUzQhQNyNA3YwAdTMC1M0IUDcjQN2MAHUzAtTNCFA3I0DdjAB1
+        MwLUzQhQNyNA3YwAdTMC1M0IUDcjQN2MAHUzAtTNCFA3I0DdjAB1MwLUzQhQNyNA3YwAdTMC1M0IUDcj
+        QN2MAHUzAtTNCFA3I0DdjAB1MwLU3ef6iQBp5/oAAk7P1SHT8TUAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="bunifuButton7.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAI8AAAAlCAYAAAB75LobAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACLSURBVHhe7dKxEUVQAADBVxMN/TZoRheUx8iN8S/eYKNL
-        b0zr8ZvX44R/3N+MpwBfmIfMPGTmITMPmXnIzENmHjLzkJmHzDxk5iEzD5l5yMxDZh4y85CZh8w8ZOYh
-        Mw+ZecjMQ2YeMvOQmYfMPGTmITMPmXnIzENmHjLzkJmHzDxkY1727SnAq2XfLv+DVP2rvg3/AAAAAElF
-        TkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAS8AAAAqCAYAAADiZN3fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC3SURBVHhe7dSxEQJBEAPBC5XMPhTIDB4bBTBUtdFrjPw9
+        53ke53XeAH/j+7fmAFA3I0DdjAB1MwLUzQhQNyNA3YwAdTMC1M0IUDcjQN2MAHUzAtTNCFA3I0DdjAB1
+        MwLUzQhQNyNA3YwAdTMC1M0IUDcjQN2MAHUzAtTNCFA3I0DdjAB1MwLUzQhQNyNA3YwAdTMC1M0IUDcj
+        QN2MAHUzAtTNCFA3I0DdjAB1MwLU3ef6iQBp5/oAAk7P1SHT8TUAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="bunifuLabel10.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Century Gothic'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel13.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Century Gothic'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
 </root>

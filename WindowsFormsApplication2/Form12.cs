@@ -49,5 +49,10 @@ namespace WindowsFormsApplication2
                 this.Hide();
             }
         }
+
+        private void rectangleShape1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

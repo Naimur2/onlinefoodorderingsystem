@@ -73,7 +73,7 @@ namespace WindowsFormsApplication2
                             Form14 tt = new Form14(label1.Text);
                             Form16 ss = new Form16(label1.Text);
                             myshop c = new myshop(label1.Text);
-                            Form17 cc = new Form17("a", label1.Text);
+                            Form23 cc = new Form23(label1.Text);
 
                             cc.Show();
                             this.Hide();
@@ -91,10 +91,10 @@ namespace WindowsFormsApplication2
                         else if (ox.IsMatch(label2.Text))
                         {
 
-                            Form23 cc = new Form23(label1.Text);
-                            cc.Show();
-                            this.Hide();
-                            timer1.Stop();
+                          //  Form23 cc = new Form23(label1.Text);
+                        //    cc.Show();
+                         //   this.Hide();
+                        //    timer1.Stop();
 
                         }
                     }

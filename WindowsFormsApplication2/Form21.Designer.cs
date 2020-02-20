@@ -28,158 +28,158 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties234 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties235 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form21));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties233 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties236 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties237 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties238 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties239 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties240 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textbox8 = new Bunifu.Framework.BunifuCustomTextbox();
             this.textbox7 = new Bunifu.Framework.BunifuCustomTextbox();
             this.label35 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.unlike4 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.like4 = new System.Windows.Forms.PictureBox();
-            this.bunifuButton8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label66 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.textbox10 = new Bunifu.Framework.BunifuCustomTextbox();
             this.textbox9 = new Bunifu.Framework.BunifuCustomTextbox();
             this.label36 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.unlike5 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.like5 = new System.Windows.Forms.PictureBox();
-            this.bunifuButton9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label69 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.textbox16 = new Bunifu.Framework.BunifuCustomTextbox();
             this.textbox15 = new Bunifu.Framework.BunifuCustomTextbox();
             this.label39 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.unlike8 = new System.Windows.Forms.PictureBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.like8 = new System.Windows.Forms.PictureBox();
-            this.bunifuButton12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label64 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textbox6 = new Bunifu.Framework.BunifuCustomTextbox();
             this.textbox5 = new Bunifu.Framework.BunifuCustomTextbox();
             this.label34 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.unlike3 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.like3 = new System.Windows.Forms.PictureBox();
-            this.bunifuButton7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label68 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.textbox14 = new Bunifu.Framework.BunifuCustomTextbox();
             this.textbox13 = new Bunifu.Framework.BunifuCustomTextbox();
             this.label38 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.unlike7 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.like7 = new System.Windows.Forms.PictureBox();
-            this.bunifuButton11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label63 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textbox4 = new Bunifu.Framework.BunifuCustomTextbox();
             this.textbox3 = new Bunifu.Framework.BunifuCustomTextbox();
             this.label33 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.unlike2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.like2 = new System.Windows.Forms.PictureBox();
-            this.bunifuButton6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textbox12 = new Bunifu.Framework.BunifuCustomTextbox();
             this.label67 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomTextbox11 = new Bunifu.Framework.BunifuCustomTextbox();
             this.textbox11 = new Bunifu.Framework.BunifuCustomTextbox();
             this.label37 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.unlike6 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.like6 = new System.Windows.Forms.PictureBox();
-            this.bunifuButton10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label62 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textbox2 = new Bunifu.Framework.BunifuCustomTextbox();
             this.textbox1 = new Bunifu.Framework.BunifuCustomTextbox();
             this.label32 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.unlike1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.like1 = new System.Windows.Forms.PictureBox();
-            this.bunifuButton5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label43 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.unlike4 = new System.Windows.Forms.PictureBox();
+            this.like4 = new System.Windows.Forms.PictureBox();
+            this.bunifuButton8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.unlike5 = new System.Windows.Forms.PictureBox();
+            this.like5 = new System.Windows.Forms.PictureBox();
+            this.bunifuButton9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.unlike8 = new System.Windows.Forms.PictureBox();
+            this.like8 = new System.Windows.Forms.PictureBox();
+            this.bunifuButton12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.unlike3 = new System.Windows.Forms.PictureBox();
+            this.like3 = new System.Windows.Forms.PictureBox();
+            this.bunifuButton7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.unlike7 = new System.Windows.Forms.PictureBox();
+            this.like7 = new System.Windows.Forms.PictureBox();
+            this.bunifuButton11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.unlike2 = new System.Windows.Forms.PictureBox();
+            this.like2 = new System.Windows.Forms.PictureBox();
+            this.bunifuButton6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.unlike6 = new System.Windows.Forms.PictureBox();
+            this.like6 = new System.Windows.Forms.PictureBox();
+            this.bunifuButton10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.unlike1 = new System.Windows.Forms.PictureBox();
+            this.like1 = new System.Windows.Forms.PictureBox();
+            this.bunifuButton5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel9.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.like4)).BeginInit();
-            this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.like5)).BeginInit();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.like8)).BeginInit();
-            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.like3)).BeginInit();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.like7)).BeginInit();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.like2)).BeginInit();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.like6)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.like1)).BeginInit();
@@ -229,15 +229,6 @@
             this.label65.TabIndex = 20;
             this.label65.Text = "label65";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(15, 27);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(256, 152);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 17;
-            this.pictureBox4.TabStop = false;
-            // 
             // textbox8
             // 
             this.textbox8.BorderColor = System.Drawing.Color.SeaGreen;
@@ -259,6 +250,10 @@
             this.textbox7.Name = "textbox7";
             this.textbox7.Size = new System.Drawing.Size(49, 30);
             this.textbox7.TabIndex = 11;
+            this.textbox7.TextChanged += new System.EventHandler(this.textbox7_TextChanged);
+            this.textbox7.Enter += new System.EventHandler(this.textbox7_Enter);
+            this.textbox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox7_KeyDown);
+            this.textbox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox7_KeyPress);
             // 
             // label35
             // 
@@ -290,16 +285,6 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "label8";
             // 
-            // unlike4
-            // 
-            this.unlike4.Image = global::WindowsFormsApplication2.Properties.Resources.thumbs_down_48px;
-            this.unlike4.Location = new System.Drawing.Point(78, 274);
-            this.unlike4.Name = "unlike4";
-            this.unlike4.Size = new System.Drawing.Size(20, 20);
-            this.unlike4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.unlike4.TabIndex = 7;
-            this.unlike4.TabStop = false;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -309,49 +294,6 @@
             this.label9.Size = new System.Drawing.Size(41, 16);
             this.label9.TabIndex = 6;
             this.label9.Text = "label9";
-            // 
-            // like4
-            // 
-            this.like4.Image = ((System.Drawing.Image)(resources.GetObject("like4.Image")));
-            this.like4.Location = new System.Drawing.Point(11, 274);
-            this.like4.Name = "like4";
-            this.like4.Size = new System.Drawing.Size(20, 20);
-            this.like4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.like4.TabIndex = 5;
-            this.like4.TabStop = false;
-            // 
-            // bunifuButton8
-            // 
-            this.bunifuButton8.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton8.BackgroundImage")));
-            this.bunifuButton8.ButtonText = "Order";
-            this.bunifuButton8.ButtonTextMarginLeft = 0;
-            this.bunifuButton8.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuButton8.DisabledFillColor = System.Drawing.Color.Gray;
-            this.bunifuButton8.DisabledForecolor = System.Drawing.Color.White;
-            this.bunifuButton8.ForeColor = System.Drawing.Color.Black;
-            this.bunifuButton8.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton8.IconPadding = 10;
-            this.bunifuButton8.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton8.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton8.IdleBorderRadius = 1;
-            this.bunifuButton8.IdleBorderThickness = 0;
-            this.bunifuButton8.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton8.IdleIconLeftImage = null;
-            this.bunifuButton8.IdleIconRightImage = null;
-            this.bunifuButton8.Location = new System.Drawing.Point(153, 269);
-            this.bunifuButton8.Name = "bunifuButton8";
-            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties9.BorderRadius = 1;
-            stateProperties9.BorderThickness = 1;
-            stateProperties9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties9.IconLeftImage = null;
-            stateProperties9.IconRightImage = null;
-            this.bunifuButton8.onHoverState = stateProperties9;
-            this.bunifuButton8.Size = new System.Drawing.Size(125, 25);
-            this.bunifuButton8.TabIndex = 1;
-            this.bunifuButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton8.Click += new System.EventHandler(this.bunifuButton8_Click);
             // 
             // label48
             // 
@@ -404,15 +346,6 @@
             this.label66.TabIndex = 20;
             this.label66.Text = "label66";
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Location = new System.Drawing.Point(15, 27);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(256, 152);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 17;
-            this.pictureBox8.TabStop = false;
-            // 
             // textbox10
             // 
             this.textbox10.BorderColor = System.Drawing.Color.SeaGreen;
@@ -434,6 +367,10 @@
             this.textbox9.Name = "textbox9";
             this.textbox9.Size = new System.Drawing.Size(49, 30);
             this.textbox9.TabIndex = 11;
+            this.textbox9.TextChanged += new System.EventHandler(this.textbox9_TextChanged);
+            this.textbox9.Enter += new System.EventHandler(this.textbox9_Enter);
+            this.textbox9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox9_KeyDown);
+            this.textbox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox9_KeyPress);
             // 
             // label36
             // 
@@ -465,16 +402,6 @@
             this.label10.TabIndex = 8;
             this.label10.Text = "label10";
             // 
-            // unlike5
-            // 
-            this.unlike5.Image = global::WindowsFormsApplication2.Properties.Resources.thumbs_down_48px;
-            this.unlike5.Location = new System.Drawing.Point(78, 274);
-            this.unlike5.Name = "unlike5";
-            this.unlike5.Size = new System.Drawing.Size(20, 20);
-            this.unlike5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.unlike5.TabIndex = 7;
-            this.unlike5.TabStop = false;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -484,49 +411,6 @@
             this.label11.Size = new System.Drawing.Size(47, 16);
             this.label11.TabIndex = 6;
             this.label11.Text = "label11";
-            // 
-            // like5
-            // 
-            this.like5.Image = ((System.Drawing.Image)(resources.GetObject("like5.Image")));
-            this.like5.Location = new System.Drawing.Point(11, 274);
-            this.like5.Name = "like5";
-            this.like5.Size = new System.Drawing.Size(20, 20);
-            this.like5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.like5.TabIndex = 5;
-            this.like5.TabStop = false;
-            // 
-            // bunifuButton9
-            // 
-            this.bunifuButton9.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton9.BackgroundImage")));
-            this.bunifuButton9.ButtonText = "Order";
-            this.bunifuButton9.ButtonTextMarginLeft = 0;
-            this.bunifuButton9.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuButton9.DisabledFillColor = System.Drawing.Color.Gray;
-            this.bunifuButton9.DisabledForecolor = System.Drawing.Color.White;
-            this.bunifuButton9.ForeColor = System.Drawing.Color.Black;
-            this.bunifuButton9.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton9.IconPadding = 10;
-            this.bunifuButton9.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton9.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton9.IdleBorderRadius = 1;
-            this.bunifuButton9.IdleBorderThickness = 0;
-            this.bunifuButton9.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton9.IdleIconLeftImage = null;
-            this.bunifuButton9.IdleIconRightImage = null;
-            this.bunifuButton9.Location = new System.Drawing.Point(153, 269);
-            this.bunifuButton9.Name = "bunifuButton9";
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties10.BorderRadius = 1;
-            stateProperties10.BorderThickness = 1;
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties10.IconLeftImage = null;
-            stateProperties10.IconRightImage = null;
-            this.bunifuButton9.onHoverState = stateProperties10;
-            this.bunifuButton9.Size = new System.Drawing.Size(125, 25);
-            this.bunifuButton9.TabIndex = 1;
-            this.bunifuButton9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton9.Click += new System.EventHandler(this.bunifuButton9_Click);
             // 
             // label50
             // 
@@ -579,15 +463,6 @@
             this.label69.TabIndex = 21;
             this.label69.Text = "label69";
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Location = new System.Drawing.Point(15, 27);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(256, 152);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 20;
-            this.pictureBox7.TabStop = false;
-            // 
             // textbox16
             // 
             this.textbox16.BorderColor = System.Drawing.Color.SeaGreen;
@@ -609,6 +484,10 @@
             this.textbox15.Name = "textbox15";
             this.textbox15.Size = new System.Drawing.Size(49, 30);
             this.textbox15.TabIndex = 16;
+            this.textbox15.TextChanged += new System.EventHandler(this.textbox15_TextChanged);
+            this.textbox15.Enter += new System.EventHandler(this.textbox15_Enter);
+            this.textbox15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox15_KeyDown);
+            this.textbox15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox15_KeyPress);
             // 
             // label39
             // 
@@ -630,16 +509,6 @@
             this.label16.TabIndex = 8;
             this.label16.Text = "label16";
             // 
-            // unlike8
-            // 
-            this.unlike8.Image = global::WindowsFormsApplication2.Properties.Resources.thumbs_down_48px;
-            this.unlike8.Location = new System.Drawing.Point(78, 274);
-            this.unlike8.Name = "unlike8";
-            this.unlike8.Size = new System.Drawing.Size(20, 20);
-            this.unlike8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.unlike8.TabIndex = 7;
-            this.unlike8.TabStop = false;
-            // 
             // label29
             // 
             this.label29.AutoSize = true;
@@ -659,49 +528,6 @@
             this.label17.Size = new System.Drawing.Size(47, 16);
             this.label17.TabIndex = 6;
             this.label17.Text = "label17";
-            // 
-            // like8
-            // 
-            this.like8.Image = ((System.Drawing.Image)(resources.GetObject("like8.Image")));
-            this.like8.Location = new System.Drawing.Point(11, 274);
-            this.like8.Name = "like8";
-            this.like8.Size = new System.Drawing.Size(20, 20);
-            this.like8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.like8.TabIndex = 5;
-            this.like8.TabStop = false;
-            // 
-            // bunifuButton12
-            // 
-            this.bunifuButton12.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton12.BackgroundImage")));
-            this.bunifuButton12.ButtonText = "Order";
-            this.bunifuButton12.ButtonTextMarginLeft = 0;
-            this.bunifuButton12.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuButton12.DisabledFillColor = System.Drawing.Color.Gray;
-            this.bunifuButton12.DisabledForecolor = System.Drawing.Color.White;
-            this.bunifuButton12.ForeColor = System.Drawing.Color.Black;
-            this.bunifuButton12.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton12.IconPadding = 10;
-            this.bunifuButton12.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton12.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton12.IdleBorderRadius = 1;
-            this.bunifuButton12.IdleBorderThickness = 0;
-            this.bunifuButton12.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton12.IdleIconLeftImage = null;
-            this.bunifuButton12.IdleIconRightImage = null;
-            this.bunifuButton12.Location = new System.Drawing.Point(153, 269);
-            this.bunifuButton12.Name = "bunifuButton12";
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties11.BorderRadius = 1;
-            stateProperties11.BorderThickness = 1;
-            stateProperties11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties11.IconLeftImage = null;
-            stateProperties11.IconRightImage = null;
-            this.bunifuButton12.onHoverState = stateProperties11;
-            this.bunifuButton12.Size = new System.Drawing.Size(125, 25);
-            this.bunifuButton12.TabIndex = 1;
-            this.bunifuButton12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton12.Click += new System.EventHandler(this.bunifuButton12_Click);
             // 
             // label56
             // 
@@ -754,15 +580,6 @@
             this.label64.TabIndex = 20;
             this.label64.Text = "label64";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(15, 27);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(256, 152);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 17;
-            this.pictureBox3.TabStop = false;
-            // 
             // textbox6
             // 
             this.textbox6.BorderColor = System.Drawing.Color.SeaGreen;
@@ -784,6 +601,10 @@
             this.textbox5.Name = "textbox5";
             this.textbox5.Size = new System.Drawing.Size(49, 30);
             this.textbox5.TabIndex = 11;
+            this.textbox5.TextChanged += new System.EventHandler(this.textbox5_TextChanged);
+            this.textbox5.Enter += new System.EventHandler(this.textbox5_Enter);
+            this.textbox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox5_KeyDown);
+            this.textbox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox5_KeyPress);
             // 
             // label34
             // 
@@ -815,16 +636,6 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "label6";
             // 
-            // unlike3
-            // 
-            this.unlike3.Image = global::WindowsFormsApplication2.Properties.Resources.thumbs_down_48px;
-            this.unlike3.Location = new System.Drawing.Point(78, 274);
-            this.unlike3.Name = "unlike3";
-            this.unlike3.Size = new System.Drawing.Size(20, 20);
-            this.unlike3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.unlike3.TabIndex = 7;
-            this.unlike3.TabStop = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -834,49 +645,6 @@
             this.label7.Size = new System.Drawing.Size(41, 16);
             this.label7.TabIndex = 6;
             this.label7.Text = "label7";
-            // 
-            // like3
-            // 
-            this.like3.Image = ((System.Drawing.Image)(resources.GetObject("like3.Image")));
-            this.like3.Location = new System.Drawing.Point(11, 274);
-            this.like3.Name = "like3";
-            this.like3.Size = new System.Drawing.Size(20, 20);
-            this.like3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.like3.TabIndex = 5;
-            this.like3.TabStop = false;
-            // 
-            // bunifuButton7
-            // 
-            this.bunifuButton7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton7.BackgroundImage")));
-            this.bunifuButton7.ButtonText = "Order";
-            this.bunifuButton7.ButtonTextMarginLeft = 0;
-            this.bunifuButton7.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuButton7.DisabledFillColor = System.Drawing.Color.Gray;
-            this.bunifuButton7.DisabledForecolor = System.Drawing.Color.White;
-            this.bunifuButton7.ForeColor = System.Drawing.Color.Black;
-            this.bunifuButton7.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton7.IconPadding = 10;
-            this.bunifuButton7.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton7.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton7.IdleBorderRadius = 1;
-            this.bunifuButton7.IdleBorderThickness = 0;
-            this.bunifuButton7.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton7.IdleIconLeftImage = null;
-            this.bunifuButton7.IdleIconRightImage = null;
-            this.bunifuButton7.Location = new System.Drawing.Point(153, 269);
-            this.bunifuButton7.Name = "bunifuButton7";
-            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties12.BorderRadius = 1;
-            stateProperties12.BorderThickness = 1;
-            stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties12.IconLeftImage = null;
-            stateProperties12.IconRightImage = null;
-            this.bunifuButton7.onHoverState = stateProperties12;
-            this.bunifuButton7.Size = new System.Drawing.Size(125, 25);
-            this.bunifuButton7.TabIndex = 1;
-            this.bunifuButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton7.Click += new System.EventHandler(this.bunifuButton7_Click);
             // 
             // label46
             // 
@@ -929,15 +697,6 @@
             this.label68.TabIndex = 21;
             this.label68.Text = "label68";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(15, 27);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(256, 152);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 20;
-            this.pictureBox6.TabStop = false;
-            // 
             // textbox14
             // 
             this.textbox14.BorderColor = System.Drawing.Color.SeaGreen;
@@ -959,6 +718,10 @@
             this.textbox13.Name = "textbox13";
             this.textbox13.Size = new System.Drawing.Size(49, 30);
             this.textbox13.TabIndex = 16;
+            this.textbox13.TextChanged += new System.EventHandler(this.textbox13_TextChanged);
+            this.textbox13.Enter += new System.EventHandler(this.textbox13_Enter);
+            this.textbox13.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox13_KeyDown);
+            this.textbox13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox13_KeyPress);
             // 
             // label38
             // 
@@ -990,16 +753,6 @@
             this.label28.TabIndex = 13;
             this.label28.Text = "label28";
             // 
-            // unlike7
-            // 
-            this.unlike7.Image = global::WindowsFormsApplication2.Properties.Resources.thumbs_down_48px;
-            this.unlike7.Location = new System.Drawing.Point(79, 274);
-            this.unlike7.Name = "unlike7";
-            this.unlike7.Size = new System.Drawing.Size(20, 20);
-            this.unlike7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.unlike7.TabIndex = 7;
-            this.unlike7.TabStop = false;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -1009,49 +762,6 @@
             this.label15.Size = new System.Drawing.Size(47, 16);
             this.label15.TabIndex = 6;
             this.label15.Text = "label15";
-            // 
-            // like7
-            // 
-            this.like7.Image = ((System.Drawing.Image)(resources.GetObject("like7.Image")));
-            this.like7.Location = new System.Drawing.Point(12, 274);
-            this.like7.Name = "like7";
-            this.like7.Size = new System.Drawing.Size(20, 20);
-            this.like7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.like7.TabIndex = 5;
-            this.like7.TabStop = false;
-            // 
-            // bunifuButton11
-            // 
-            this.bunifuButton11.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton11.BackgroundImage")));
-            this.bunifuButton11.ButtonText = "Order";
-            this.bunifuButton11.ButtonTextMarginLeft = 0;
-            this.bunifuButton11.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuButton11.DisabledFillColor = System.Drawing.Color.Gray;
-            this.bunifuButton11.DisabledForecolor = System.Drawing.Color.White;
-            this.bunifuButton11.ForeColor = System.Drawing.Color.Black;
-            this.bunifuButton11.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton11.IconPadding = 10;
-            this.bunifuButton11.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton11.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton11.IdleBorderRadius = 1;
-            this.bunifuButton11.IdleBorderThickness = 0;
-            this.bunifuButton11.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton11.IdleIconLeftImage = null;
-            this.bunifuButton11.IdleIconRightImage = null;
-            this.bunifuButton11.Location = new System.Drawing.Point(153, 269);
-            this.bunifuButton11.Name = "bunifuButton11";
-            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties13.BorderRadius = 1;
-            stateProperties13.BorderThickness = 1;
-            stateProperties13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties13.IconLeftImage = null;
-            stateProperties13.IconRightImage = null;
-            this.bunifuButton11.onHoverState = stateProperties13;
-            this.bunifuButton11.Size = new System.Drawing.Size(125, 25);
-            this.bunifuButton11.TabIndex = 1;
-            this.bunifuButton11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton11.Click += new System.EventHandler(this.bunifuButton11_Click);
             // 
             // label54
             // 
@@ -1104,15 +814,6 @@
             this.label63.TabIndex = 19;
             this.label63.Text = "label63";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(15, 27);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(256, 152);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
-            // 
             // textbox4
             // 
             this.textbox4.BorderColor = System.Drawing.Color.SeaGreen;
@@ -1134,6 +835,10 @@
             this.textbox3.Name = "textbox3";
             this.textbox3.Size = new System.Drawing.Size(49, 30);
             this.textbox3.TabIndex = 11;
+            this.textbox3.TextChanged += new System.EventHandler(this.textbox3_TextChanged);
+            this.textbox3.Enter += new System.EventHandler(this.textbox3_Enter);
+            this.textbox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox3_KeyDown);
+            this.textbox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox3_KeyPress);
             // 
             // label33
             // 
@@ -1165,16 +870,6 @@
             this.label23.TabIndex = 9;
             this.label23.Text = "label23";
             // 
-            // unlike2
-            // 
-            this.unlike2.Image = global::WindowsFormsApplication2.Properties.Resources.thumbs_down_48px;
-            this.unlike2.Location = new System.Drawing.Point(79, 274);
-            this.unlike2.Name = "unlike2";
-            this.unlike2.Size = new System.Drawing.Size(20, 20);
-            this.unlike2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.unlike2.TabIndex = 7;
-            this.unlike2.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -1184,49 +879,6 @@
             this.label5.Size = new System.Drawing.Size(41, 16);
             this.label5.TabIndex = 6;
             this.label5.Text = "label5";
-            // 
-            // like2
-            // 
-            this.like2.Image = ((System.Drawing.Image)(resources.GetObject("like2.Image")));
-            this.like2.Location = new System.Drawing.Point(12, 274);
-            this.like2.Name = "like2";
-            this.like2.Size = new System.Drawing.Size(20, 20);
-            this.like2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.like2.TabIndex = 5;
-            this.like2.TabStop = false;
-            // 
-            // bunifuButton6
-            // 
-            this.bunifuButton6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton6.BackgroundImage")));
-            this.bunifuButton6.ButtonText = "Order";
-            this.bunifuButton6.ButtonTextMarginLeft = 0;
-            this.bunifuButton6.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuButton6.DisabledFillColor = System.Drawing.Color.Gray;
-            this.bunifuButton6.DisabledForecolor = System.Drawing.Color.White;
-            this.bunifuButton6.ForeColor = System.Drawing.Color.Black;
-            this.bunifuButton6.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton6.IconPadding = 10;
-            this.bunifuButton6.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton6.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton6.IdleBorderRadius = 1;
-            this.bunifuButton6.IdleBorderThickness = 0;
-            this.bunifuButton6.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton6.IdleIconLeftImage = null;
-            this.bunifuButton6.IdleIconRightImage = null;
-            this.bunifuButton6.Location = new System.Drawing.Point(153, 269);
-            this.bunifuButton6.Name = "bunifuButton6";
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties14.BorderRadius = 1;
-            stateProperties14.BorderThickness = 1;
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties14.IconLeftImage = null;
-            stateProperties14.IconRightImage = null;
-            this.bunifuButton6.onHoverState = stateProperties14;
-            this.bunifuButton6.Size = new System.Drawing.Size(125, 25);
-            this.bunifuButton6.TabIndex = 1;
-            this.bunifuButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton6.Click += new System.EventHandler(this.bunifuButton6_Click);
             // 
             // label44
             // 
@@ -1291,15 +943,6 @@
             this.label67.TabIndex = 20;
             this.label67.Text = "label67";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(13, 27);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(256, 152);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 18;
-            this.pictureBox5.TabStop = false;
-            // 
             // bunifuCustomTextbox11
             // 
             this.bunifuCustomTextbox11.BorderColor = System.Drawing.Color.SeaGreen;
@@ -1321,6 +964,10 @@
             this.textbox11.Name = "textbox11";
             this.textbox11.Size = new System.Drawing.Size(49, 30);
             this.textbox11.TabIndex = 14;
+            this.textbox11.TextChanged += new System.EventHandler(this.textbox11_TextChanged);
+            this.textbox11.Enter += new System.EventHandler(this.textbox11_Enter);
+            this.textbox11.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox11_KeyDown);
+            this.textbox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox11_KeyPress);
             // 
             // label37
             // 
@@ -1352,16 +999,6 @@
             this.label12.TabIndex = 8;
             this.label12.Text = "label12";
             // 
-            // unlike6
-            // 
-            this.unlike6.Image = global::WindowsFormsApplication2.Properties.Resources.thumbs_down_48px;
-            this.unlike6.Location = new System.Drawing.Point(79, 274);
-            this.unlike6.Name = "unlike6";
-            this.unlike6.Size = new System.Drawing.Size(20, 20);
-            this.unlike6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.unlike6.TabIndex = 7;
-            this.unlike6.TabStop = false;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -1371,49 +1008,6 @@
             this.label13.Size = new System.Drawing.Size(47, 16);
             this.label13.TabIndex = 6;
             this.label13.Text = "label13";
-            // 
-            // like6
-            // 
-            this.like6.Image = ((System.Drawing.Image)(resources.GetObject("like6.Image")));
-            this.like6.Location = new System.Drawing.Point(12, 274);
-            this.like6.Name = "like6";
-            this.like6.Size = new System.Drawing.Size(20, 20);
-            this.like6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.like6.TabIndex = 5;
-            this.like6.TabStop = false;
-            // 
-            // bunifuButton10
-            // 
-            this.bunifuButton10.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton10.BackgroundImage")));
-            this.bunifuButton10.ButtonText = "Order";
-            this.bunifuButton10.ButtonTextMarginLeft = 0;
-            this.bunifuButton10.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuButton10.DisabledFillColor = System.Drawing.Color.Gray;
-            this.bunifuButton10.DisabledForecolor = System.Drawing.Color.White;
-            this.bunifuButton10.ForeColor = System.Drawing.Color.Black;
-            this.bunifuButton10.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton10.IconPadding = 10;
-            this.bunifuButton10.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton10.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton10.IdleBorderRadius = 1;
-            this.bunifuButton10.IdleBorderThickness = 0;
-            this.bunifuButton10.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuButton10.IdleIconLeftImage = null;
-            this.bunifuButton10.IdleIconRightImage = null;
-            this.bunifuButton10.Location = new System.Drawing.Point(150, 269);
-            this.bunifuButton10.Name = "bunifuButton10";
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties15.BorderRadius = 1;
-            stateProperties15.BorderThickness = 1;
-            stateProperties15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties15.IconLeftImage = null;
-            stateProperties15.IconRightImage = null;
-            this.bunifuButton10.onHoverState = stateProperties15;
-            this.bunifuButton10.Size = new System.Drawing.Size(125, 25);
-            this.bunifuButton10.TabIndex = 1;
-            this.bunifuButton10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton10.Click += new System.EventHandler(this.bunifuButton10_Click);
             // 
             // label52
             // 
@@ -1466,16 +1060,6 @@
             this.label62.TabIndex = 12;
             this.label62.Text = "label62";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 152);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // textbox2
             // 
             this.textbox2.BorderColor = System.Drawing.Color.SeaGreen;
@@ -1497,6 +1081,10 @@
             this.textbox1.Name = "textbox1";
             this.textbox1.Size = new System.Drawing.Size(49, 30);
             this.textbox1.TabIndex = 7;
+            this.textbox1.TextChanged += new System.EventHandler(this.textbox1_TextChanged);
+            this.textbox1.Enter += new System.EventHandler(this.textbox1_Enter);
+            this.textbox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox1_KeyDown);
+            this.textbox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox1_KeyPress);
             // 
             // label32
             // 
@@ -1528,16 +1116,6 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "label3";
             // 
-            // unlike1
-            // 
-            this.unlike1.Image = ((System.Drawing.Image)(resources.GetObject("unlike1.Image")));
-            this.unlike1.Location = new System.Drawing.Point(79, 274);
-            this.unlike1.Name = "unlike1";
-            this.unlike1.Size = new System.Drawing.Size(20, 20);
-            this.unlike1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.unlike1.TabIndex = 3;
-            this.unlike1.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -1548,9 +1126,496 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(186, 238);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(25, 17);
+            this.label43.TabIndex = 10;
+            this.label43.Text = "TK:";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(99, 238);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(34, 17);
+            this.label42.TabIndex = 9;
+            this.label42.Text = "Qty:";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(15, 27);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(256, 152);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 17;
+            this.pictureBox4.TabStop = false;
+            // 
+            // unlike4
+            // 
+            this.unlike4.Image = global::WindowsFormsApplication2.Properties.Resources.thumbs_down_48px;
+            this.unlike4.Location = new System.Drawing.Point(78, 274);
+            this.unlike4.Name = "unlike4";
+            this.unlike4.Size = new System.Drawing.Size(20, 20);
+            this.unlike4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.unlike4.TabIndex = 7;
+            this.unlike4.TabStop = false;
+            this.unlike4.Click += new System.EventHandler(this.unlike4_Click);
+            // 
+            // like4
+            // 
+            this.like4.Image = ((System.Drawing.Image)(resources.GetObject("like4.Image")));
+            this.like4.Location = new System.Drawing.Point(11, 274);
+            this.like4.Name = "like4";
+            this.like4.Size = new System.Drawing.Size(20, 20);
+            this.like4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.like4.TabIndex = 5;
+            this.like4.TabStop = false;
+            this.like4.Click += new System.EventHandler(this.like4_Click);
+            // 
+            // bunifuButton8
+            // 
+            this.bunifuButton8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton8.BackgroundImage")));
+            this.bunifuButton8.ButtonText = "Order";
+            this.bunifuButton8.ButtonTextMarginLeft = 0;
+            this.bunifuButton8.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton8.DisabledFillColor = System.Drawing.Color.Gray;
+            this.bunifuButton8.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton8.ForeColor = System.Drawing.Color.Black;
+            this.bunifuButton8.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton8.IconPadding = 10;
+            this.bunifuButton8.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton8.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuButton8.IdleBorderRadius = 1;
+            this.bunifuButton8.IdleBorderThickness = 0;
+            this.bunifuButton8.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuButton8.IdleIconLeftImage = null;
+            this.bunifuButton8.IdleIconRightImage = null;
+            this.bunifuButton8.Location = new System.Drawing.Point(153, 269);
+            this.bunifuButton8.Name = "bunifuButton8";
+            stateProperties234.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties234.BorderRadius = 1;
+            stateProperties234.BorderThickness = 1;
+            stateProperties234.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties234.IconLeftImage = null;
+            stateProperties234.IconRightImage = null;
+            this.bunifuButton8.onHoverState = stateProperties234;
+            this.bunifuButton8.Size = new System.Drawing.Size(125, 25);
+            this.bunifuButton8.TabIndex = 1;
+            this.bunifuButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton8.Click += new System.EventHandler(this.bunifuButton8_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Location = new System.Drawing.Point(15, 27);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(256, 152);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 17;
+            this.pictureBox8.TabStop = false;
+            // 
+            // unlike5
+            // 
+            this.unlike5.Image = global::WindowsFormsApplication2.Properties.Resources.thumbs_down_48px;
+            this.unlike5.Location = new System.Drawing.Point(78, 274);
+            this.unlike5.Name = "unlike5";
+            this.unlike5.Size = new System.Drawing.Size(20, 20);
+            this.unlike5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.unlike5.TabIndex = 7;
+            this.unlike5.TabStop = false;
+            this.unlike5.Click += new System.EventHandler(this.unlike5_Click);
+            // 
+            // like5
+            // 
+            this.like5.Image = ((System.Drawing.Image)(resources.GetObject("like5.Image")));
+            this.like5.Location = new System.Drawing.Point(11, 274);
+            this.like5.Name = "like5";
+            this.like5.Size = new System.Drawing.Size(20, 20);
+            this.like5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.like5.TabIndex = 5;
+            this.like5.TabStop = false;
+            this.like5.Click += new System.EventHandler(this.like5_Click);
+            // 
+            // bunifuButton9
+            // 
+            this.bunifuButton9.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton9.BackgroundImage")));
+            this.bunifuButton9.ButtonText = "Order";
+            this.bunifuButton9.ButtonTextMarginLeft = 0;
+            this.bunifuButton9.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton9.DisabledFillColor = System.Drawing.Color.Gray;
+            this.bunifuButton9.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton9.ForeColor = System.Drawing.Color.Black;
+            this.bunifuButton9.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton9.IconPadding = 10;
+            this.bunifuButton9.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton9.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuButton9.IdleBorderRadius = 1;
+            this.bunifuButton9.IdleBorderThickness = 0;
+            this.bunifuButton9.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuButton9.IdleIconLeftImage = null;
+            this.bunifuButton9.IdleIconRightImage = null;
+            this.bunifuButton9.Location = new System.Drawing.Point(153, 269);
+            this.bunifuButton9.Name = "bunifuButton9";
+            stateProperties235.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties235.BorderRadius = 1;
+            stateProperties235.BorderThickness = 1;
+            stateProperties235.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties235.IconLeftImage = null;
+            stateProperties235.IconRightImage = null;
+            this.bunifuButton9.onHoverState = stateProperties235;
+            this.bunifuButton9.Size = new System.Drawing.Size(125, 25);
+            this.bunifuButton9.TabIndex = 1;
+            this.bunifuButton9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton9.Click += new System.EventHandler(this.bunifuButton9_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Location = new System.Drawing.Point(15, 27);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(256, 152);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 20;
+            this.pictureBox7.TabStop = false;
+            // 
+            // unlike8
+            // 
+            this.unlike8.Image = global::WindowsFormsApplication2.Properties.Resources.thumbs_down_48px;
+            this.unlike8.Location = new System.Drawing.Point(78, 274);
+            this.unlike8.Name = "unlike8";
+            this.unlike8.Size = new System.Drawing.Size(20, 20);
+            this.unlike8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.unlike8.TabIndex = 7;
+            this.unlike8.TabStop = false;
+            this.unlike8.Click += new System.EventHandler(this.unlike8_Click);
+            // 
+            // like8
+            // 
+            this.like8.Image = ((System.Drawing.Image)(resources.GetObject("like8.Image")));
+            this.like8.Location = new System.Drawing.Point(11, 274);
+            this.like8.Name = "like8";
+            this.like8.Size = new System.Drawing.Size(20, 20);
+            this.like8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.like8.TabIndex = 5;
+            this.like8.TabStop = false;
+            this.like8.Click += new System.EventHandler(this.like8_Click);
+            // 
+            // bunifuButton12
+            // 
+            this.bunifuButton12.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton12.BackgroundImage")));
+            this.bunifuButton12.ButtonText = "Order";
+            this.bunifuButton12.ButtonTextMarginLeft = 0;
+            this.bunifuButton12.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton12.DisabledFillColor = System.Drawing.Color.Gray;
+            this.bunifuButton12.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton12.ForeColor = System.Drawing.Color.Black;
+            this.bunifuButton12.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton12.IconPadding = 10;
+            this.bunifuButton12.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton12.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuButton12.IdleBorderRadius = 1;
+            this.bunifuButton12.IdleBorderThickness = 0;
+            this.bunifuButton12.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuButton12.IdleIconLeftImage = null;
+            this.bunifuButton12.IdleIconRightImage = null;
+            this.bunifuButton12.Location = new System.Drawing.Point(153, 269);
+            this.bunifuButton12.Name = "bunifuButton12";
+            stateProperties233.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties233.BorderRadius = 1;
+            stateProperties233.BorderThickness = 1;
+            stateProperties233.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties233.IconLeftImage = null;
+            stateProperties233.IconRightImage = null;
+            this.bunifuButton12.onHoverState = stateProperties233;
+            this.bunifuButton12.Size = new System.Drawing.Size(125, 25);
+            this.bunifuButton12.TabIndex = 1;
+            this.bunifuButton12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton12.Click += new System.EventHandler(this.bunifuButton12_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(15, 27);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(256, 152);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
+            // 
+            // unlike3
+            // 
+            this.unlike3.Image = global::WindowsFormsApplication2.Properties.Resources.thumbs_down_48px;
+            this.unlike3.Location = new System.Drawing.Point(78, 274);
+            this.unlike3.Name = "unlike3";
+            this.unlike3.Size = new System.Drawing.Size(20, 20);
+            this.unlike3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.unlike3.TabIndex = 7;
+            this.unlike3.TabStop = false;
+            this.unlike3.Click += new System.EventHandler(this.unlike3_Click);
+            // 
+            // like3
+            // 
+            this.like3.Image = ((System.Drawing.Image)(resources.GetObject("like3.Image")));
+            this.like3.Location = new System.Drawing.Point(11, 274);
+            this.like3.Name = "like3";
+            this.like3.Size = new System.Drawing.Size(20, 20);
+            this.like3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.like3.TabIndex = 5;
+            this.like3.TabStop = false;
+            this.like3.Click += new System.EventHandler(this.like3_Click);
+            // 
+            // bunifuButton7
+            // 
+            this.bunifuButton7.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton7.BackgroundImage")));
+            this.bunifuButton7.ButtonText = "Order";
+            this.bunifuButton7.ButtonTextMarginLeft = 0;
+            this.bunifuButton7.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton7.DisabledFillColor = System.Drawing.Color.Gray;
+            this.bunifuButton7.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton7.ForeColor = System.Drawing.Color.Black;
+            this.bunifuButton7.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton7.IconPadding = 10;
+            this.bunifuButton7.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton7.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuButton7.IdleBorderRadius = 1;
+            this.bunifuButton7.IdleBorderThickness = 0;
+            this.bunifuButton7.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuButton7.IdleIconLeftImage = null;
+            this.bunifuButton7.IdleIconRightImage = null;
+            this.bunifuButton7.Location = new System.Drawing.Point(153, 269);
+            this.bunifuButton7.Name = "bunifuButton7";
+            stateProperties236.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties236.BorderRadius = 1;
+            stateProperties236.BorderThickness = 1;
+            stateProperties236.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties236.IconLeftImage = null;
+            stateProperties236.IconRightImage = null;
+            this.bunifuButton7.onHoverState = stateProperties236;
+            this.bunifuButton7.Size = new System.Drawing.Size(125, 25);
+            this.bunifuButton7.TabIndex = 1;
+            this.bunifuButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton7.Click += new System.EventHandler(this.bunifuButton7_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(15, 27);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(256, 152);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 20;
+            this.pictureBox6.TabStop = false;
+            // 
+            // unlike7
+            // 
+            this.unlike7.Image = global::WindowsFormsApplication2.Properties.Resources.thumbs_down_48px;
+            this.unlike7.Location = new System.Drawing.Point(79, 274);
+            this.unlike7.Name = "unlike7";
+            this.unlike7.Size = new System.Drawing.Size(20, 20);
+            this.unlike7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.unlike7.TabIndex = 7;
+            this.unlike7.TabStop = false;
+            this.unlike7.Click += new System.EventHandler(this.unlike7_Click);
+            // 
+            // like7
+            // 
+            this.like7.Image = ((System.Drawing.Image)(resources.GetObject("like7.Image")));
+            this.like7.Location = new System.Drawing.Point(12, 274);
+            this.like7.Name = "like7";
+            this.like7.Size = new System.Drawing.Size(20, 20);
+            this.like7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.like7.TabIndex = 5;
+            this.like7.TabStop = false;
+            this.like7.Click += new System.EventHandler(this.like7_Click);
+            // 
+            // bunifuButton11
+            // 
+            this.bunifuButton11.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton11.BackgroundImage")));
+            this.bunifuButton11.ButtonText = "Order";
+            this.bunifuButton11.ButtonTextMarginLeft = 0;
+            this.bunifuButton11.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton11.DisabledFillColor = System.Drawing.Color.Gray;
+            this.bunifuButton11.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton11.ForeColor = System.Drawing.Color.Black;
+            this.bunifuButton11.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton11.IconPadding = 10;
+            this.bunifuButton11.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton11.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuButton11.IdleBorderRadius = 1;
+            this.bunifuButton11.IdleBorderThickness = 0;
+            this.bunifuButton11.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuButton11.IdleIconLeftImage = null;
+            this.bunifuButton11.IdleIconRightImage = null;
+            this.bunifuButton11.Location = new System.Drawing.Point(153, 269);
+            this.bunifuButton11.Name = "bunifuButton11";
+            stateProperties237.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties237.BorderRadius = 1;
+            stateProperties237.BorderThickness = 1;
+            stateProperties237.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties237.IconLeftImage = null;
+            stateProperties237.IconRightImage = null;
+            this.bunifuButton11.onHoverState = stateProperties237;
+            this.bunifuButton11.Size = new System.Drawing.Size(125, 25);
+            this.bunifuButton11.TabIndex = 1;
+            this.bunifuButton11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton11.Click += new System.EventHandler(this.bunifuButton11_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(15, 27);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(256, 152);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            // 
+            // unlike2
+            // 
+            this.unlike2.Image = global::WindowsFormsApplication2.Properties.Resources.thumbs_down_48px;
+            this.unlike2.Location = new System.Drawing.Point(79, 274);
+            this.unlike2.Name = "unlike2";
+            this.unlike2.Size = new System.Drawing.Size(20, 20);
+            this.unlike2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.unlike2.TabIndex = 7;
+            this.unlike2.TabStop = false;
+            this.unlike2.Click += new System.EventHandler(this.unlike2_Click);
+            // 
+            // like2
+            // 
+            this.like2.Image = ((System.Drawing.Image)(resources.GetObject("like2.Image")));
+            this.like2.Location = new System.Drawing.Point(12, 274);
+            this.like2.Name = "like2";
+            this.like2.Size = new System.Drawing.Size(20, 20);
+            this.like2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.like2.TabIndex = 5;
+            this.like2.TabStop = false;
+            this.like2.Click += new System.EventHandler(this.like2_Click);
+            // 
+            // bunifuButton6
+            // 
+            this.bunifuButton6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton6.BackgroundImage")));
+            this.bunifuButton6.ButtonText = "Order";
+            this.bunifuButton6.ButtonTextMarginLeft = 0;
+            this.bunifuButton6.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton6.DisabledFillColor = System.Drawing.Color.Gray;
+            this.bunifuButton6.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton6.ForeColor = System.Drawing.Color.Black;
+            this.bunifuButton6.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton6.IconPadding = 10;
+            this.bunifuButton6.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton6.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuButton6.IdleBorderRadius = 1;
+            this.bunifuButton6.IdleBorderThickness = 0;
+            this.bunifuButton6.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuButton6.IdleIconLeftImage = null;
+            this.bunifuButton6.IdleIconRightImage = null;
+            this.bunifuButton6.Location = new System.Drawing.Point(153, 269);
+            this.bunifuButton6.Name = "bunifuButton6";
+            stateProperties238.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties238.BorderRadius = 1;
+            stateProperties238.BorderThickness = 1;
+            stateProperties238.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties238.IconLeftImage = null;
+            stateProperties238.IconRightImage = null;
+            this.bunifuButton6.onHoverState = stateProperties238;
+            this.bunifuButton6.Size = new System.Drawing.Size(125, 25);
+            this.bunifuButton6.TabIndex = 1;
+            this.bunifuButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton6.Click += new System.EventHandler(this.bunifuButton6_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(13, 27);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(256, 152);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 18;
+            this.pictureBox5.TabStop = false;
+            // 
+            // unlike6
+            // 
+            this.unlike6.Image = global::WindowsFormsApplication2.Properties.Resources.thumbs_down_48px;
+            this.unlike6.Location = new System.Drawing.Point(79, 274);
+            this.unlike6.Name = "unlike6";
+            this.unlike6.Size = new System.Drawing.Size(20, 20);
+            this.unlike6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.unlike6.TabIndex = 7;
+            this.unlike6.TabStop = false;
+            this.unlike6.Click += new System.EventHandler(this.unlike6_Click);
+            // 
+            // like6
+            // 
+            this.like6.Image = ((System.Drawing.Image)(resources.GetObject("like6.Image")));
+            this.like6.Location = new System.Drawing.Point(12, 274);
+            this.like6.Name = "like6";
+            this.like6.Size = new System.Drawing.Size(20, 20);
+            this.like6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.like6.TabIndex = 5;
+            this.like6.TabStop = false;
+            this.like6.Click += new System.EventHandler(this.like6_Click);
+            // 
+            // bunifuButton10
+            // 
+            this.bunifuButton10.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton10.BackgroundImage")));
+            this.bunifuButton10.ButtonText = "Order";
+            this.bunifuButton10.ButtonTextMarginLeft = 0;
+            this.bunifuButton10.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton10.DisabledFillColor = System.Drawing.Color.Gray;
+            this.bunifuButton10.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton10.ForeColor = System.Drawing.Color.Black;
+            this.bunifuButton10.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton10.IconPadding = 10;
+            this.bunifuButton10.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton10.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuButton10.IdleBorderRadius = 1;
+            this.bunifuButton10.IdleBorderThickness = 0;
+            this.bunifuButton10.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuButton10.IdleIconLeftImage = null;
+            this.bunifuButton10.IdleIconRightImage = null;
+            this.bunifuButton10.Location = new System.Drawing.Point(150, 269);
+            this.bunifuButton10.Name = "bunifuButton10";
+            stateProperties239.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties239.BorderRadius = 1;
+            stateProperties239.BorderThickness = 1;
+            stateProperties239.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties239.IconLeftImage = null;
+            stateProperties239.IconRightImage = null;
+            this.bunifuButton10.onHoverState = stateProperties239;
+            this.bunifuButton10.Size = new System.Drawing.Size(125, 25);
+            this.bunifuButton10.TabIndex = 1;
+            this.bunifuButton10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton10.Click += new System.EventHandler(this.bunifuButton10_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(14, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(256, 152);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // unlike1
+            // 
+            this.unlike1.Image = ((System.Drawing.Image)(resources.GetObject("unlike1.Image")));
+            this.unlike1.Location = new System.Drawing.Point(79, 274);
+            this.unlike1.Name = "unlike1";
+            this.unlike1.Size = new System.Drawing.Size(20, 20);
+            this.unlike1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.unlike1.TabIndex = 3;
+            this.unlike1.TabStop = false;
+            this.unlike1.Click += new System.EventHandler(this.unlike1_Click);
+            // 
             // like1
             // 
-            this.like1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.like1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.like1.Image = ((System.Drawing.Image)(resources.GetObject("like1.Image")));
             this.like1.Location = new System.Drawing.Point(12, 274);
             this.like1.Name = "like1";
@@ -1558,6 +1623,7 @@
             this.like1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.like1.TabIndex = 1;
             this.like1.TabStop = false;
+            this.like1.Click += new System.EventHandler(this.like1_Click);
             // 
             // bunifuButton5
             // 
@@ -1580,35 +1646,17 @@
             this.bunifuButton5.IdleIconRightImage = null;
             this.bunifuButton5.Location = new System.Drawing.Point(150, 269);
             this.bunifuButton5.Name = "bunifuButton5";
-            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties16.BorderRadius = 1;
-            stateProperties16.BorderThickness = 1;
-            stateProperties16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            stateProperties16.IconLeftImage = null;
-            stateProperties16.IconRightImage = null;
-            this.bunifuButton5.onHoverState = stateProperties16;
+            stateProperties240.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties240.BorderRadius = 1;
+            stateProperties240.BorderThickness = 1;
+            stateProperties240.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            stateProperties240.IconLeftImage = null;
+            stateProperties240.IconRightImage = null;
+            this.bunifuButton5.onHoverState = stateProperties240;
             this.bunifuButton5.Size = new System.Drawing.Size(125, 25);
             this.bunifuButton5.TabIndex = 0;
             this.bunifuButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton5.Click += new System.EventHandler(this.bunifuButton5_Click);
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(186, 238);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(25, 17);
-            this.label43.TabIndex = 10;
-            this.label43.Text = "TK:";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(99, 238);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(34, 17);
-            this.label42.TabIndex = 9;
-            this.label42.Text = "Qty:";
             // 
             // Form21
             // 
@@ -1616,7 +1664,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1127, 577);
+            this.ClientSize = new System.Drawing.Size(1144, 577);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel6);
@@ -1633,41 +1681,41 @@
             this.Load += new System.EventHandler(this.Form21_Load);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.like4)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.like5)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.like8)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.like3)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.like7)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.like2)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.like6)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.like1)).EndInit();
