@@ -150,10 +150,11 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bunifuButton5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMwAAAAhCAYAAACV+ESuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB+SURBVHhe7dOxEYBADAQxl0pnXwp0Bk/MztCAAjnYiz1z
-        zjHX3MCP91dyAFpGoGUEWkagZQRaRqBlBFpGoGUEWkagZQRaRqBlBFpGoGUEWkagZQRaRqBlBFpGoGUE
-        WkagZQRaRqBlBFpGoGUEWkagZQRaRqBlBNo+6xOBMOsBXBbrWH79/LsAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAATcAAAAoCAYAAACb1b3IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVHhe7dQxFQJREATBLxVnJwWcwREzBppXQW3Qk+85
+        z/M4r/MG+BvfvzYHgLoZAepmBKibEaBuRoC6GQHqZgSomxGgbkaAuhkB6mYEqJsRoG5GgLoZAepmBKib
+        EaBuRoC6GQHqZgSomxGgbkaAuhkB6mYEqJsRoG5GgLoZAepmBKibEaBuRoC6GQHqZgSomxGgbkaAuhkB
+        6mYEqJsRoG5GgLoZAeruc/1EgLRzfQA1AtxVCwLqVwAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

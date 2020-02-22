@@ -26,34 +26,62 @@ namespace WindowsFormsApplication2
 
         private void Form10_Load(object sender, EventArgs e)
         {
-            
 
 
 
-            string queryb = "SELECT manager.name as 'Manager Name',shop.s_name as 'Shop name',maddress as Address,memail as Email,mphone as phone,mpic from manager,shop where manager.mid=shop.mid";
+            string queryb = "SELECT mpic,manager.mid,manager.name,mphone,maddress,memail,s_name from manager,shop";
             MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
             DataTable zz = new DataTable();
             dataa.Fill(zz);
-           
-
-            mname.Text = zz.Rows[0][0].ToString();
-            sname.Text = zz.Rows[0][1].ToString();
-            maddress.Text = zz.Rows[0][2].ToString();
-            mmail.Text = zz.Rows[0][3].ToString();
-            mphone.Text = zz.Rows[0][4].ToString();
 
 
-            try {
-                byte[] img = (byte[])zz.Rows[0][5];
-                MemoryStream ms = new MemoryStream(img);
-                bunifuPictureBox1.Image = Image.FromStream(ms);
-            }
-            catch(Exception ex)
+            DataTable cc = new DataTable();
+
+            int i = zz.Rows.Count;
+            cc.Columns.Add("Pic", typeof(Image));
+            cc.Columns.Add("Username", typeof(string));
+            cc.Columns.Add("Name", typeof(string));
+            
+            cc.Columns.Add("Phone", typeof(string));
+            cc.Columns.Add("Address", typeof(string));
+            
+            cc.Columns.Add("Email", typeof(string));
+            cc.Columns.Add("Shop name", typeof(string));
+         
+
+
+
+
+
+
+
+
+            for (int j = 0; j < i; j++)
             {
 
+                byte[] img1 = (byte[])zz.Rows[j][0];
+                MemoryStream ms1 = new MemoryStream(img1);
+                Image image = Image.FromStream(ms1);
 
-                bunifuPictureBox1.Image =Properties.Resources.user;
+
+                cc.Rows.Add(Image.FromStream(ms1),Cryptography.Decrypt(zz.Rows[j][1].ToString()), zz.Rows[j][2].ToString(), zz.Rows[j][3].ToString(), zz.Rows[j][4].ToString(), zz.Rows[j][5].ToString(), zz.Rows[j][6].ToString());
+
+
             }
+
+
+
+            DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            DataGridView1.RowTemplate.Height = 58;
+            
+            DataGridView1.DataSource = cc;
+
+
+
+            DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
+            imageColumn = (DataGridViewImageColumn)DataGridView1.Columns[0];
+            imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -126,85 +154,119 @@ namespace WindowsFormsApplication2
 
         }
 
-        private void bunifuButton3_Click(object sender, EventArgs e)
+        private void bunifuButton1_Click_1(object sender, EventArgs e)
         {
-            string usernam = Cryptography.Encrypt(textBox2.Text);
-            string mail = Cryptography.Encrypt(textBox2.Text);
+           
+        }
 
-            string query = " select* FROM manager,customer,admin,deliveryboy where customer.username = '" + usernam + "' and manager.mid = '" + usernam + "' and admin.masterid = '" + usernam + "' and deliveryboy.user = '" + usernam + "'";
-
-            string query2 = "select * from customer,manager,admin,deliveryboy where  customer.email='" + mail + "' and manager.memail='" +textBox3.Text + "' and deliveryboy.demail ='" + textBox3.Text + "' and admin.mastermail='" + mail + "' ";
-
-            MySqlDataAdapter data = new MySqlDataAdapter(query, con);
-            MySqlDataAdapter dat = new MySqlDataAdapter(query2, con);
-
-            DataTable dt = new DataTable();
-            DataTable it = new DataTable();
-
-            data.Fill(dt);
-            dat.Fill(it);
-            if (dt.Rows.Count==1)
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DataGridView1.Rows.Count != 0)
             {
-                MessageBox.Show("Username Not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
+               
+                textBox2.Text = DataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
             }
-          else  if (it.Rows.Count == 1)
-            {
-                MessageBox.Show("Username Not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
             }
 
-
-
-          else  if (textBox2.Text == "" && textBox1.Text == "")
-            {
-                MessageBox.Show("Please add InFormation", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
-            }
-            else if (textBox1.Text.Length < 6)
+        private void bunifuButton1_Click_2(object sender, EventArgs e)
+        {
+            if (textBox2.Text=="")
             {
 
-                MessageBox.Show("Password should be 6character", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Please Select an user", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
 
             }
             else
             {
-                MemoryStream ms = new MemoryStream();
-                Image profile = Properties.Resources.user;
-                profile.Save(ms, profile.RawFormat);
-                byte[] img = ms.ToArray();
-                string user = Cryptography.Encrypt(textBox2.Text);
-                string pass = Cryptography.Encrypt(textBox1.Text);
-              
-                MySqlCommand cm = new MySqlCommand();
-                cm.Connection = con;
-                cm.CommandText = "insert into manager(mid,name,keycode,maddress,memail,mphone,mpic) values (@mid,@name,@keycode,@maddress,@memail,@mphone,@mpic)";
-                cm.Parameters.AddWithValue("@mid", user);
-                cm.Parameters.AddWithValue("@keycode", pass);
-                cm.Parameters.AddWithValue("@name", "Not updated");
-                cm.Parameters.AddWithValue("maddress", "Not updated");
-                cm.Parameters.AddWithValue("@memail", textBox3.Text);
-                cm.Parameters.AddWithValue("@mphone", "Not updated");
-                cm.Parameters.AddWithValue("@image", img);
-                con.Open();
-                cm.ExecuteNonQuery();
+                try
+                {
+                    string message = "Do you want to Update Your Data?";
+                    string title = "Update";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.Yes)
+                    {
+                        string user = Cryptography.Encrypt(textBox2.Text);
+                        MySqlCommand cm = new MySqlCommand();
+                        cm.Connection = con;
+                        cm.CommandText = "DELETE FROM `manager` WHERE mid='"+user+"'";
+                       
+                        con.Open();
+                        cm.ExecuteNonQuery();
 
-                con.Close();
+                        con.Close();
+                        MessageBox.Show("Data updsted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+
+                        string queryb = "SELECT mpic,manager.mid,manager.name,mphone,maddress,memail,s_name from manager,shop";
+                        MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
+                        DataTable zz = new DataTable();
+                        dataa.Fill(zz);
+
+
+                        DataTable cc = new DataTable();
+
+                        int i = zz.Rows.Count;
+                        cc.Columns.Add("Pic", typeof(Image));
+                        cc.Columns.Add("Username", typeof(string));
+                        cc.Columns.Add("Name", typeof(string));
+
+                        cc.Columns.Add("Phone", typeof(string));
+                        cc.Columns.Add("Address", typeof(string));
+
+                        cc.Columns.Add("Email", typeof(string));
+                        cc.Columns.Add("Shop name", typeof(string));
+
+
+
+
+
+
+
+
+
+                        for (int j = 0; j < i; j++)
+                        {
+
+                            byte[] img1 = (byte[])zz.Rows[j][0];
+                            MemoryStream ms1 = new MemoryStream(img1);
+                            Image image = Image.FromStream(ms1);
+
+
+                            cc.Rows.Add(Image.FromStream(ms1), Cryptography.Decrypt(zz.Rows[j][1].ToString()), zz.Rows[j][2].ToString(), zz.Rows[j][3].ToString(), zz.Rows[j][4].ToString(), zz.Rows[j][5].ToString(), zz.Rows[j][6].ToString());
+
+
+                        }
+
+
+
+                        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                        DataGridView1.RowTemplate.Height = 50;
+
+                        DataGridView1.DataSource = cc;
+
+
+
+                        DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
+                        imageColumn = (DataGridViewImageColumn)DataGridView1.Columns[0];
+                        imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                    }
+                    else
+                    {
+
+                    }
+                    }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Username not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                }
             }
-         
-        }
-
-        private void bunifuButton1_Click_1(object sender, EventArgs e)
-        {
-            MySqlCommand cm = new MySqlCommand();
-            cm.Connection = con;
-            cm.CommandText = "Truncate Table manager)";
-           
-            con.Open();
-            cm.ExecuteNonQuery();
-
-            con.Close();
         }
     }
 }

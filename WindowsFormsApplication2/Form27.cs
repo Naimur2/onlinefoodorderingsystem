@@ -65,7 +65,9 @@ namespace WindowsFormsApplication2
              
                 con.Open();
                 cm.ExecuteNonQuery();
+                con.Close();
                 MessageBox.Show("Data updated", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                comboBox1.Text = comboBox1.Text;
 
             }
         }
@@ -85,6 +87,7 @@ namespace WindowsFormsApplication2
             cc.Columns.Add("Orderno", typeof(string));
             cc.Columns.Add("Address", typeof(string));
             cc.Columns.Add("Status", typeof(string));
+
             for (int j = 0; j < i; j++)
             {
 

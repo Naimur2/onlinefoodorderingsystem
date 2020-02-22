@@ -35,14 +35,26 @@ namespace WindowsFormsApplication2
             log.details(18, label66, label26, label36, pictureBox5);
 
             log.like(11, label2, label3, "ratings");
-            log.like(12, label4, label5, "ratings");
-            log.like(13, label6, label7, "ratings");
-            log.like(14, label8, label9, "ratings");
+            log.like(12, label5, label4, "ratings");
+            log.like(13, label7, label6, "ratings");
+            log.like(14, label9, label8, "ratings");
 
-            log.like(15, label12, label13, "ratings");
-            log.like(16, label14, label15, "ratings");
-            log.like(17, label16, label17, "ratings");
-            log.like(18, label10, label11, "ratings");
+            log.like(15, label13, label12, "ratings");
+            log.like(16, label15, label14, "ratings");
+            log.like(17, label17, label16, "ratings");
+            log.like(18, label11, label10, "ratings");
+
+         
+
+                Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "11", like1, unlike1);
+                Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "12", like2, unlike2);
+                Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "13", like3, unlike3);
+            Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "14", like4, unlike4);
+            Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "18", like5, unlike5);
+            Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "15", like6, unlike6);
+            Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "16", like7, unlike7);
+            Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "17", like8, unlike8);
+            
         }
 
 
@@ -196,43 +208,43 @@ public string bb(int foodno,string database)
 
         private void like2_Click(object sender, EventArgs e)
         {
-            log.likebutton(12, label1.Text, like2, unlike2, label5, label4, "ratings");
+            log.likebutton(12, label1.Text, like2, unlike2, label4, label5, "ratings");
 
         }
 
         private void like3_Click(object sender, EventArgs e)
         {
-            log.likebutton(13, label1.Text, like3, unlike3, label7, label6, "ratings");
+            log.likebutton(13, label1.Text, like3, unlike3, label6, label7, "ratings");
 
         }
 
         private void like4_Click(object sender, EventArgs e)
         {
-            log.likebutton(14, label1.Text, like4, unlike4, label9, label8, "ratings");
+            log.likebutton(14, label1.Text, like4, unlike4, label8, label9, "ratings");
 
         }
 
         private void like6_Click(object sender, EventArgs e)
         {
-            log.likebutton(15, label1.Text, like6, unlike6, label13, label12, "ratings");
+            log.likebutton(15, label1.Text, like6, unlike6, label12, label13, "ratings");
 
         }
 
         private void like7_Click(object sender, EventArgs e)
         {
-            log.likebutton(16, label1.Text, like7, unlike7, label15, label4, "ratings");
+            log.likebutton(16, label1.Text, like7, unlike7, label14, label5, "ratings");
 
         }
 
         private void like8_Click(object sender, EventArgs e)
         {
-            log.likebutton(17, label1.Text, like8, unlike8, label7, label6, "ratings");
+            log.likebutton(17, label1.Text, like8, unlike8, label6, label7, "ratings");
 
         }
 
         private void like5_Click(object sender, EventArgs e)
         {
-            log.likebutton(18, label1.Text, like5, unlike5, label11, label10, "ratings");
+            log.likebutton(18, label1.Text, like5, unlike5, label10, label11, "ratings");
 
         }
 
@@ -339,43 +351,43 @@ public string bb(int foodno,string database)
 
         private void unlike2_Click(object sender, EventArgs e)
         {
-            log.unlikebutton(12, label1.Text, like2, unlike2, label5, label4, "ratings");
+            log.unlikebutton(12, label1.Text, like2, unlike2, label4, label5, "ratings");
 
         }
 
         private void unlike3_Click(object sender, EventArgs e)
         {
-            log.unlikebutton(13, label1.Text, like3, unlike3, label7, label6, "ratings");
+            log.unlikebutton(13, label1.Text, like3, unlike3, label6, label7, "ratings");
 
         }
 
         private void unlike4_Click(object sender, EventArgs e)
         {
-            log.unlikebutton(14, label1.Text, like4, unlike4, label9, label8, "ratings");
+            log.unlikebutton(14, label1.Text, like4, unlike4, label8, label9, "ratings");
 
         }
 
         private void unlike5_Click(object sender, EventArgs e)
         {
-            log.unlikebutton(18, label1.Text, like5, unlike5, label11, label10, "ratings");
+            log.unlikebutton(18, label1.Text, like5, unlike5, label10, label11, "ratings");
 
         }
 
         private void unlike6_Click(object sender, EventArgs e)
         {
-            log.unlikebutton(15, label1.Text, like6, unlike6, label13, label12, "ratings");
+            log.unlikebutton(15, label1.Text, like6, unlike6, label12, label13, "ratings");
 
         }
 
         private void unlike7_Click(object sender, EventArgs e)
         {
-            log.unlikebutton(16, label1.Text, like7, unlike7, label15, label14, "ratings");
+            log.unlikebutton(16, label1.Text, like7, unlike7, label14, label15, "ratings");
 
         }
 
         private void unlike8_Click(object sender, EventArgs e)
         {
-            log.unlikebutton(17, label1.Text, like8, unlike8, label17, label16, "ratings");
+            log.unlikebutton(17, label1.Text, like8, unlike8, label16, label17, "ratings");
 
         }
 

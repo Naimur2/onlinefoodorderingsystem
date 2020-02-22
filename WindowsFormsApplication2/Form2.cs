@@ -149,12 +149,15 @@ namespace WindowsFormsApplication2
 
 
                                 defaul();
-                                Form14 tt = new Form14(Textbox1.Text);
-                                Form16 ss = new Form16(Textbox1.Text);
-                                myshop c = new myshop(Textbox1.Text);
-                                Form17 cc = new Form17("a", Textbox1.Text);
 
-                                cc.Show();
+
+                                
+                             Form14 tt = new Form14(Textbox1.Text);
+                              Form16 ss = new Form16(Textbox1.Text);
+                               myshop c = new myshop(Textbox1.Text);
+                               Form17 cc = new Form17("a", Textbox1.Text);
+
+                               cc.Show();
                                 timer3.Start();
 
 
@@ -176,8 +179,8 @@ namespace WindowsFormsApplication2
                             {
                                 defaul();
 
-                                admin ss = new admin(Textbox1.Text);
-                                Form17 cc = new Form17("d", Textbox1.Text);
+                                admin ss = new admin();
+                                Form17 cc = new Form17("b", Textbox1.Text);
                                 cc.Show();
                                 timer3.Start();
 
@@ -210,7 +213,7 @@ namespace WindowsFormsApplication2
 
                                 defaul();
 
-                                Form17 cc = new Form17("x", Textbox1.Text);
+                                Form17 cc = new Form17("c", Textbox1.Text);
 
                                 cc.Show();
                                 timer3.Start();
@@ -252,7 +255,7 @@ namespace WindowsFormsApplication2
 
                             Form11 tt = new Form11(Textbox1.Text);
                             Form5 ss = new Form5(Textbox1.Text);
-                            Form4 cc = new Form4(Textbox1.Text);
+                            Form17 cc = new Form17("d",Textbox1.Text);
 
                             cc.Show();
                             timer3.Start();

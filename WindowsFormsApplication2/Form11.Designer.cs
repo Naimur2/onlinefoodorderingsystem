@@ -61,9 +61,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.bunifuCheckbox2 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuButton5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.checkbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
@@ -105,13 +103,13 @@
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
             this.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
             this.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -136,7 +134,7 @@
             this.DataGridView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(239)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(209)))), ((int)(((byte)(169)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -153,7 +151,7 @@
             this.DataGridView1.RowHeadersVisible = false;
             this.DataGridView1.RowTemplate.Height = 40;
             this.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridView1.Size = new System.Drawing.Size(630, 537);
+            this.DataGridView1.Size = new System.Drawing.Size(630, 561);
             this.DataGridView1.TabIndex = 38;
             this.DataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.MediumSeaGreen;
             this.DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
@@ -329,6 +327,7 @@
             this.si.ReadOnly = true;
             this.si.Size = new System.Drawing.Size(311, 32);
             this.si.TabIndex = 117;
+            this.si.TextChanged += new System.EventHandler(this.si_TextChanged);
             // 
             // bunifuLabel1
             // 
@@ -419,7 +418,8 @@
             this.comboBox2.Items.AddRange(new object[] {
             "Pending",
             "Delivered",
-            "Invalid address"});
+            "Invalid address",
+            "OnTheway"});
             this.comboBox2.Location = new System.Drawing.Point(697, 12);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(208, 25);
@@ -455,20 +455,6 @@
             this.label3.TabIndex = 126;
             this.label3.Text = "Select Status:";
             // 
-            // bunifuCheckbox2
-            // 
-            this.bunifuCheckbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox2.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox2.Checked = false;
-            this.bunifuCheckbox2.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox2.Location = new System.Drawing.Point(185, 626);
-            this.bunifuCheckbox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.bunifuCheckbox2.Name = "bunifuCheckbox2";
-            this.bunifuCheckbox2.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox2.TabIndex = 128;
-            this.bunifuCheckbox2.Visible = false;
-            // 
             // bunifuLabel10
             // 
             this.bunifuLabel10.AutoEllipsis = false;
@@ -483,20 +469,6 @@
             this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.bunifuLabel10.Visible = false;
-            // 
-            // bunifuCheckbox1
-            // 
-            this.bunifuCheckbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox1.Checked = false;
-            this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox1.Location = new System.Drawing.Point(379, 628);
-            this.bunifuCheckbox1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.bunifuCheckbox1.Name = "bunifuCheckbox1";
-            this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox1.TabIndex = 130;
-            this.bunifuCheckbox1.Visible = false;
             // 
             // bunifuLabel11
             // 
@@ -533,7 +505,7 @@
             this.bunifuButton5.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bunifuButton5.IdleIconLeftImage = null;
             this.bunifuButton5.IdleIconRightImage = null;
-            this.bunifuButton5.Location = new System.Drawing.Point(167, 530);
+            this.bunifuButton5.Location = new System.Drawing.Point(116, 508);
             this.bunifuButton5.Name = "bunifuButton5";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             stateProperties1.BorderRadius = 1;
@@ -542,10 +514,11 @@
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
             this.bunifuButton5.onHoverState = stateProperties1;
-            this.bunifuButton5.Size = new System.Drawing.Size(204, 33);
+            this.bunifuButton5.Size = new System.Drawing.Size(311, 40);
             this.bunifuButton5.TabIndex = 132;
             this.bunifuButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton5.Visible = false;
+            this.bunifuButton5.Click += new System.EventHandler(this.bunifuButton5_Click);
             // 
             // checkbox1
             // 
@@ -555,7 +528,7 @@
             this.checkbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.checkbox1.ForeColor = System.Drawing.Color.White;
             this.checkbox1.Location = new System.Drawing.Point(140, 480);
-            this.checkbox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkbox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkbox1.Name = "checkbox1";
             this.checkbox1.Size = new System.Drawing.Size(20, 20);
             this.checkbox1.TabIndex = 133;
@@ -570,7 +543,7 @@
             this.checkbox2.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.checkbox2.ForeColor = System.Drawing.Color.White;
             this.checkbox2.Location = new System.Drawing.Point(285, 480);
-            this.checkbox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.checkbox2.Margin = new System.Windows.Forms.Padding(5);
             this.checkbox2.Name = "checkbox2";
             this.checkbox2.Size = new System.Drawing.Size(20, 20);
             this.checkbox2.TabIndex = 133;
@@ -581,15 +554,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1127, 577);
             this.Controls.Add(this.checkbox2);
             this.Controls.Add(this.checkbox1);
             this.Controls.Add(this.bunifuButton5);
             this.Controls.Add(this.bunifuLabel11);
-            this.Controls.Add(this.bunifuCheckbox1);
             this.Controls.Add(this.bunifuLabel10);
-            this.Controls.Add(this.bunifuCheckbox2);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.bunifuLabel9);
             this.Controls.Add(this.bunifuLabel8);
@@ -615,7 +587,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form11";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -657,9 +628,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton5;
         private Bunifu.Framework.UI.BunifuCheckbox checkbox1;

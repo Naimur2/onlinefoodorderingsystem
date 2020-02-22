@@ -30,7 +30,7 @@ namespace WindowsFormsApplication2
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            log.openchild(new Form19("manager"), panel2);
+            log.openchild(new Form19(""), panel2);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -142,5 +142,15 @@ namespace WindowsFormsApplication2
 
             }
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            log.logout(this);
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            log.Exit();
+        }
+    }
 }

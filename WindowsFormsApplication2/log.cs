@@ -92,15 +92,7 @@ namespace WindowsFormsApplication2
                 cm.ExecuteNonQuery();
                 con.Close();
 
-                string query = "select sum(like" + foodno + "),sum(unlike" + foodno + " )from " + database;
-
-                MySqlDataAdapter data = new MySqlDataAdapter(query, con);
-
-                DataTable dt = new DataTable();
-
-                data.Fill(dt);
-                liker.Text = dt.Rows[0][0].ToString();
-                unliker.Text = dt.Rows[0][1].ToString();
+                log.like(foodno, liker, unliker,database);
 
             }
             else
@@ -141,16 +133,9 @@ namespace WindowsFormsApplication2
                 cm.ExecuteNonQuery();
                 con.Close();
 
-                string query = "select sum('" + likee + "'),sum('" + unlikee + "') from " + database;
+              
 
-                MySqlDataAdapter data = new MySqlDataAdapter(query, con);
-
-                DataTable dt = new DataTable();
-
-                data.Fill(dt);
-                liker.Text = dt.Rows[0][0].ToString();
-                unliker.Text = dt.Rows[0][1].ToString();
-
+                log.like(foodno, liker, unliker, database);
 
 
             }

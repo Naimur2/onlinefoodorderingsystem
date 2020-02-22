@@ -39,7 +39,7 @@ namespace WindowsFormsApplication2
 
 
             this.FormBorderStyle = FormBorderStyle.None;
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             timer1.Start();
         }
 
@@ -82,7 +82,7 @@ namespace WindowsFormsApplication2
                         else if (mg.IsMatch(label2.Text))
                         {
 
-                            Form17 cc = new Form17("d", label1.Text);
+                            Form9 cc = new Form9(label1.Text);
                             cc.Show();
                             this.Hide();
                             timer1.Stop();
@@ -91,10 +91,10 @@ namespace WindowsFormsApplication2
                         else if (ox.IsMatch(label2.Text))
                         {
 
-                          //  Form23 cc = new Form23(label1.Text);
-                        //    cc.Show();
-                         //   this.Hide();
-                        //    timer1.Stop();
+                            SAVE cc = new SAVE(label1.Text);
+                           cc.Show();
+                           this.Hide();
+                           timer1.Stop();
 
                         }
                     }
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication2
 
                         Form11 tt = new Form11(label1.Text);
                         Form5 ss = new Form5(label1.Text);
-                        Form4 cc = new Form4(label1.Text);
+                        Form20 cc = new Form20(label1.Text);
 
                         cc.Show();
                         this.Hide();

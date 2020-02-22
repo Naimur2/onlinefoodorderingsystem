@@ -46,25 +46,33 @@ namespace WindowsFormsApplication2
             if (rectangleShape2.Width >= 318)
             {
                 if (label2.Text == "a")
-                {
+                {//manager
                     timer1.Stop();
                     Form23 nn = new Form23(label1.Text);
                     nn.Show();
                     this.Hide();
                 }
                 else
-                if (label2.Text == "d")
-                {
+                if (label2.Text == "b")
+                {//admin
                     timer1.Stop();
-                    admin nn = new admin(label1.Text);
+                    Form9 nn = new Form9(label1.Text);
                     nn.Show();
                     this.Hide();
                 }
                 else
-                if (label2.Text == "x")
-                {
+                if (label2.Text == "c")
+                { //deliveryboy
                     timer1.Stop();
-                   Form23 nn = new Form23(label1.Text);
+                   SAVE nn = new SAVE(label1.Text);
+                    nn.Show();
+                    this.Hide();
+                }
+                else
+                if (label2.Text == "d")
+                { //customer
+                    timer1.Stop();
+                    Form20 nn = new Form20(label1.Text);
                     nn.Show();
                     this.Hide();
                 }

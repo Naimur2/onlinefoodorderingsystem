@@ -94,19 +94,7 @@ namespace WindowsFormsApplication2
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "Delivered")
-            {
-                string Body = "Hi" + "Your order in asterisk food of " + quantity.Text + " " + "pice of" + Foodname.Text + " " + "is delivered in your address:" + Address.Text + "\r\n" + "Thank you, Team asterisk";
-                textBox1.Text = Body;
-            }
-            else if (comboBox1.Text == "Invalid address")
-            {
-                string Body = "Hi" + "We could not deliver your food beasuse there is no valid address of you,please provide valid address and phone number " + "Thank you, Team asterisk";
-                textBox1.Text = Body;
-            }
-            else {
-                textBox1.Clear();
-            }
+           
             }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -158,120 +146,12 @@ namespace WindowsFormsApplication2
 
         private void bunifuButton7_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "") 
-            {
-                MessageBox.Show("Please Select status","Error",MessageBoxButtons.OK,MessageBoxIcon.Hand);
-
-            }
-       
-            else
-            {
-
-
-              
-
-                try
-                {
-
-
-                    if (comboBox1.Text == "Delivered")
-                    {
-                        int i = Int32.Parse(username.Text);
-                        string aa = comboBox1.Text;
-
-                        MySqlCommand cm = new MySqlCommand();
-                        cm.Connection = con;
-                        cm.CommandText = " UPDATE `orders` SET `status` = '" + this.comboBox1.Text + "', `Message` = '"+textBox1.Text+"' WHERE `orders`.`ord_no` = '" + i + "'";
-                       
-
-                        con.Open();
-                        cm.ExecuteNonQuery();
-                        con.Close();
-                        MessageBox.Show("Data updated");
-                        string queryb = "SELECT orders.ord_no as SI,customer.address,food.foodname as food,orders.amount as Quantity,orders.tk as Tk,orders.status as Status,orders.Date as Date,orders.Time as Time from customer,orders,food Where orders.foodno=food.foodno and orders.username=customer.username and orders.status='Delivered' order by ord_no desc";
-                        MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
-                        DataTable zz = new DataTable();
-                        dataa.Fill(zz);
-                        DataGridView1.DataSource = zz;
-                        comboBox2.Text = "Delivered";
-                    }
-                    else if (comboBox1.Text == "Invalid address")
-                    {
-                        int i = Int32.Parse(label2.Text);
-                        string aa = comboBox1.Text;
-                        MySqlCommand cm = new MySqlCommand();
-                        cm.Connection = con;
-                        cm.CommandText = " UPDATE `orders` SET `status` = '" + this.comboBox1.Text + "', `Message` = '" + textBox1.Text + "' WHERE `orders`.`ord_no` = '" + i + "'";
-
-
-                        con.Open();
-                        cm.ExecuteNonQuery();
-                        con.Close();
-                        MessageBox.Show("Data updated");
-                      
-                        string queryb = "SELECT orders.ord_no as SI,customer.address,food.foodname as food,orders.amount as Quantity,orders.tk as Tk,orders.status as Status,orders.Date as Date,orders.Time as Time from customer,orders,food Where orders.foodno=food.foodno and orders.username=customer.username and orders.status='Invalid address' order by ord_no desc";
-                        MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
-                        DataTable zz = new DataTable();
-                        dataa.Fill(zz);
-                        DataGridView1.DataSource = zz;
-                        comboBox2.Text = "Invalid address";
-                    }
-                    else
-                    {
-                        
-                        int i = Int32.Parse(label2.Text);
-                        string aa = comboBox1.Text;
-
-                        MySqlCommand cm = new MySqlCommand();
-                        cm.Connection = con;
-                        cm.CommandText = " UPDATE `orders` SET `status` = '" + this.comboBox1.Text + "', `Message` = '" + textBox1.Text + "' WHERE `orders`.`ord_no` = '" + i + "'";
-
-
-                        con.Open();
-                        cm.ExecuteNonQuery();
-                        con.Close();
-                        MessageBox.Show("Data updated");
-                        string queryb = "SELECT orders.ord_no as SI,customer.address,food.foodname as food,orders.amount as Quantity,orders.tk as Tk,orders.status as Status,orders.Date as Date,orders.Time as Time from customer,orders,food Where orders.foodno=food.foodno and orders.username=customer.username and orders.status='" + this.comboBox1.Text + "' order by ord_no desc";
-                        MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
-                        DataTable zz = new DataTable();
-                        dataa.Fill(zz);
-                        DataGridView1.DataSource = zz;
-                        comboBox2.Text = comboBox1.Text;
-                    }
-                   
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("Error");
-                }
-            }
+           
         }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (DataGridView1.SelectedRows.Count > 0)
-            {
            
-               
-                username.Text = DataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
-                Foodname.Text = DataGridView1.SelectedRows[0].Cells[2].Value + string.Empty;
-                quantity.Text = DataGridView1.SelectedRows[0].Cells[3].Value + string.Empty;
-                Address.Text = DataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
-                time.Text = DataGridView1.SelectedRows[0].Cells[7].Value + string.Empty;
-                date.Text = DataGridView1.SelectedRows[0].Cells[6].Value + string.Empty;
-                string queryb = "SELECT delivery.status from delivery where ord_no= '"+username.Text+"' ";
-                MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
-                DataTable zz = new DataTable();
-                dataa.Fill(zz);
-                if (zz.Rows.Count != 0)
-                {
-                    textBox2.Text = zz.Rows[0][0].ToString();
-                }
-                else
-                {
-                    textBox2.Text = "Not Send to delivery";
-                }
-            }
         }
 
         private void bunifuButton5_Click(object sender, EventArgs e)
@@ -316,6 +196,54 @@ namespace WindowsFormsApplication2
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            
+
+
+
+
+        }
+
+        private void DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+
+
+
+        }
+       
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void bunifuButton1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
             string queryb = "SELECT orders.ord_no as SI,customer.address,food.foodname as food,orders.amount as Quantity,orders.tk as Tk,orders.status as Status,orders.Date as Date,orders.Time as Time from customer,orders,food Where orders.foodno=food.foodno and orders.username=customer.username and orders.status='" + comboBox2.Text + "' order by ord_no desc";
             MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
             DataTable zz = new DataTable();
@@ -325,7 +253,7 @@ namespace WindowsFormsApplication2
             {
                 if (DataGridView1.Rows.Count != 0)
                 {
-                   
+
                     username.Text = zz.Rows[0][0].ToString();
                     Foodname.Text = zz.Rows[0][2].ToString();
                     quantity.Text = zz.Rows[0][3].ToString();
@@ -345,18 +273,48 @@ namespace WindowsFormsApplication2
 
 
             }
-
-
-
-
         }
 
-        private void DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            if (DataGridView1.SelectedRows.Count > 0)
+            {
 
+
+                username.Text = DataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
+                Foodname.Text = DataGridView1.SelectedRows[0].Cells[2].Value + string.Empty;
+                quantity.Text = DataGridView1.SelectedRows[0].Cells[3].Value + string.Empty;
+                Address.Text = DataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
+                time.Text = DataGridView1.SelectedRows[0].Cells[7].Value + string.Empty;
+                date.Text = DataGridView1.SelectedRows[0].Cells[6].Value + string.Empty;
+                string queryb = "SELECT delivery.status,delivery.cu_status from delivery where ord_no= '" + username.Text + "' ";
+                MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
+                DataTable zz = new DataTable();
+                dataa.Fill(zz);
+                try
+                {
+                    if (zz.Rows.Count == 0)
+                    {
+                        textBox2.Text = "Not Send to delivery";
+                        textBox3.Text = "Not Send to delivery";
+                    }
+                    else
+                    {
+                        textBox2.Text = zz.Rows[0][0].ToString();
+                        textBox3.Text = zz.Rows[0][1].ToString();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    textBox2.Text = "Not Send to delivery";
+
+
+                }
+            }
         }
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox3_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             string query = "select user from deliveryboy where area='" + this.comboBox3.Text + "'";
             MySqlDataAdapter data = new MySqlDataAdapter(query, con);
@@ -364,24 +322,16 @@ namespace WindowsFormsApplication2
             data.Fill(bb);
             for (int i = 0; i < bb.Rows.Count; i++)
             {
-                comboBox4.Text =Cryptography.Decrypt( bb.Rows[i][0].ToString());
-                    
-                    
-                    
-                    }
+                comboBox4.Text = Cryptography.Decrypt(bb.Rows[i][0].ToString());
 
 
 
+            }
         }
-       
 
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        private void bunifuButton1_Click_2(object sender, EventArgs e)
         {
-           
-        }
-
-        private void bunifuButton1_Click_1(object sender, EventArgs e)
-        {if (comboBox3.Text != "" && comboBox4.Text != "")
+            if (comboBox3.Text != "" && comboBox4.Text != "")
             {
                 try
                 {
@@ -400,10 +350,11 @@ namespace WindowsFormsApplication2
 
                     MySqlCommand mm = new MySqlCommand();
                     mm.Connection = con;
-                    mm.CommandText = "Insert into delivery values(@ord,@user,@status)";
+                    mm.CommandText = "Insert into delivery values(@ord,@user,@status,@custatus)";
                     mm.Parameters.AddWithValue("ord", username.Text);
                     mm.Parameters.AddWithValue("user", Cryptography.Encrypt(comboBox4.Text));
-                    mm.Parameters.AddWithValue("status", "pending");
+                    mm.Parameters.AddWithValue("status", "Pending");
+                    mm.Parameters.AddWithValue("custatus", "Waiting");
 
                     con.Open();
                     mm.ExecuteNonQuery();
@@ -413,7 +364,30 @@ namespace WindowsFormsApplication2
 
                     comboBox2.Text = "Ontheway";
 
+                    string queryb = "SELECT delivery.status,delivery.cu_status from delivery where ord_no= '" + username.Text + "' ";
+                    MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
+                    DataTable zz = new DataTable();
+                    dataa.Fill(zz);
+                    try
+                    {
+                        if (zz.Rows.Count == 0)
+                        {
+                            textBox2.Text = "Not Send to delivery";
+                            textBox3.Text = "Not Send to delivery";
+                        }
+                        else
+                        {
+                            textBox2.Text = zz.Rows[0][0].ToString();
+                            textBox3.Text = zz.Rows[0][1].ToString();
+                        }
 
+                    }
+                    catch (Exception ex)
+                    {
+                        textBox2.Text = "Not Send to delivery";
+
+
+                    }
 
                 }
                 catch (Exception x)
@@ -428,15 +402,133 @@ namespace WindowsFormsApplication2
             {
 
 
-                MessageBox.Show("Please select delivery boy","Error",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                MessageBox.Show("Please select delivery boy", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            }
+        }
+
+        private void bunifuButton7_Click_1(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "")
+            {
+                MessageBox.Show("Please Select status", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 
             }
 
+            else
+            {
+
+
+
+
+                try
+                {
+
+
+                    if (comboBox1.Text == "Delivered")
+                    {
+                        int i = Int32.Parse(username.Text);
+                        string aa = comboBox1.Text;
+
+                        MySqlCommand cm = new MySqlCommand();
+                        cm.Connection = con;
+                        cm.CommandText = " UPDATE `orders` SET `status` = '" + this.comboBox1.Text + "', `Message` = '" + textBox1.Text + "' WHERE `orders`.`ord_no` = '" + i + "'";
+
+
+                        con.Open();
+                        cm.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Data updated");
+                        string queryb = "SELECT orders.ord_no as SI,customer.address,food.foodname as food,orders.amount as Quantity,orders.tk as Tk,orders.status as Status,orders.Date as Date,orders.Time as Time from customer,orders,food Where orders.foodno=food.foodno and orders.username=customer.username and orders.status='Delivered' order by ord_no desc";
+                        MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
+                        DataTable zz = new DataTable();
+                        dataa.Fill(zz);
+                        DataGridView1.DataSource = zz;
+                        comboBox2.Text = "Delivered";
+                    }
+                    else if (comboBox1.Text == "Invalid address")
+                    {
+                        int i = Int32.Parse(label2.Text);
+                        string aa = comboBox1.Text;
+                        MySqlCommand cm = new MySqlCommand();
+                        cm.Connection = con;
+                        cm.CommandText = " UPDATE `orders` SET `status` = '" + this.comboBox1.Text + "', `Message` = '" + textBox1.Text + "' WHERE `orders`.`ord_no` = '" + i + "'";
+
+
+                        con.Open();
+                        cm.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Data updated");
+
+                        string queryb = "SELECT orders.ord_no as SI,customer.address,food.foodname as food,orders.amount as Quantity,orders.tk as Tk,orders.status as Status,orders.Date as Date,orders.Time as Time from customer,orders,food Where orders.foodno=food.foodno and orders.username=customer.username and orders.status='Invalid address' order by ord_no desc";
+                        MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
+                        DataTable zz = new DataTable();
+                        dataa.Fill(zz);
+                        DataGridView1.DataSource = zz;
+                        comboBox2.Text = "Invalid address";
+                    }
+                    else
+                    {
+
+                        int i = Int32.Parse(label2.Text);
+                        string aa = comboBox1.Text;
+
+                        MySqlCommand cm = new MySqlCommand();
+                        cm.Connection = con;
+                        cm.CommandText = " UPDATE `orders` SET `status` = '" + this.comboBox1.Text + "', `Message` = '" + textBox1.Text + "' WHERE `orders`.`ord_no` = '" + i + "'";
+
+
+                        con.Open();
+                        cm.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Data updated");
+                        string queryb = "SELECT orders.ord_no as SI,customer.address,food.foodname as food,orders.amount as Quantity,orders.tk as Tk,orders.status as Status,orders.Date as Date,orders.Time as Time from customer,orders,food Where orders.foodno=food.foodno and orders.username=customer.username and orders.status='" + this.comboBox1.Text + "' order by ord_no desc";
+                        MySqlDataAdapter dataa = new MySqlDataAdapter(queryb, con);
+                        DataTable zz = new DataTable();
+                        dataa.Fill(zz);
+                        DataGridView1.DataSource = zz;
+                        comboBox2.Text = comboBox1.Text;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error");
+                }
+            }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
+            if(textBox3.Text=="Receieved by Customer")
+            {
+                bunifuButton7.ButtonText="Oredr Successfull";
+                bunifuButton7.Enabled = false;
 
+            }
+            else
+            {
+                bunifuButton7.ButtonText = "Update";
+                bunifuButton7.Enabled = true;
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "Delivered")
+            {
+                string Body = "Hi" + "Your order in asterisk food of " + quantity.Text + " " + "pice of" + Foodname.Text + " " + "is delivered in your address:" + Address.Text + "\r\n" + "Thank you, Team asterisk";
+                textBox1.Text = Body;
+            }
+            else if (comboBox1.Text == "Invalid address")
+            {
+                string Body = "Hi" + "We could not deliver your food beasuse there is no valid address of you,please provide valid address and phone number " + "Thank you, Team asterisk";
+                textBox1.Text = Body;
+            }
+            else
+            {
+                textBox1.Clear();
+            }
         }
     }
 }

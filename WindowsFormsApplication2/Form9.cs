@@ -38,7 +38,7 @@ namespace WindowsFormsApplication2
             timer1.Start();
             label72.Text = DateTime.Now.ToShortDateString();
             label73.Text = DateTime.Now.ToShortTimeString();
-            log.openchild(new Form22(label1.Text), panel2);
+          
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -56,6 +56,50 @@ namespace WindowsFormsApplication2
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             log.logout(this);
+        }
+
+        private void bunifuButton2_Click_1(object sender, EventArgs e)
+        {
+            log.openchild(new Form19("manager"), panel2);
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            log.logout(this);
+
+        }
+
+        private void bunifuButton4_Click(object sender, EventArgs e)
+        {
+            log.openchild(new changepass(label1.Text,"admin"), panel2);
+
+        }
+
+        private void bunifuButton11_Click(object sender, EventArgs e)
+        {
+            log.openchild(new admin(), panel2);
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            log.Exit();
+        }
+
+        private void bunifuButton1_Click_1(object sender, EventArgs e)
+        {
+            log.openchild(new Form10(), panel2);
+        }
+
+        private void bunifuButton3_Click_1(object sender, EventArgs e)
+        {
+            log.openchild(new Form14(label1.Text), panel2);
         }
     }
 }

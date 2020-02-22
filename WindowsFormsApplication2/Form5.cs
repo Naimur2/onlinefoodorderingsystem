@@ -2061,44 +2061,7 @@ public void details(int foodn,Label money,Label foodname,Label details ,PictureB
 
         private void like1_Click(object sender, EventArgs e)
         {
-            String query1 = "SELECT * from orders where username='" + this.ree.Text + "' and foodno=2";
-            MySqlDataAdapter data1 = new MySqlDataAdapter(query1, con);
-            DataTable dt1 = new DataTable();
-            data1.Fill(dt1);
-            if (dt1.Rows.Count > 0)
-
-
-            {
-
-                like1.BackColor = Color.LightBlue;
-                unlike1.BackColor = Color.Aqua;
-                MySqlCommand cm = new MySqlCommand();
-                cm.Connection = con;
-                cm.CommandText = "update ratings set like1=1,unlike1=0 where username='" + this.ree.Text + "'";
-
-                con.Open();
-                cm.ExecuteNonQuery();
-                con.Close();
-                string query = "select sum(like1),sum(unlike1) from ratings ";
-
-                MySqlDataAdapter data = new MySqlDataAdapter(query, con);
-
-                DataTable dt = new DataTable();
-
-                data.Fill(dt);
-                label3.Text = dt.Rows[0][0].ToString();
-                label2.Text = dt.Rows[0][1].ToString();
-
-
-
-            }
-            else
-            {
-
-
-                MessageBox.Show("Please oreder this food to give your opinion");
-
-            }
+            log.likebutton(1, label1.Text, like1, unlike1, label3, label2, "ratings");
         }
 
         private void unlike1_Click(object sender, EventArgs e)

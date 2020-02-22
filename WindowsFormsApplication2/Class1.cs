@@ -58,5 +58,83 @@ namespace WindowsFormsApplication2
 
             }
         }
+
+        public static bool checkusername(String user)
+        {
+            bool a;
+            MySqlConnection con = new MySqlConnection(Cryptography.con());
+
+            string query = " select * FROM manager where manager.mid = '" + user + "'";
+            MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            data.Fill(dt);
+
+
+            string query1 = " select * FROM customer where customer.username = '" + user + "'";
+            MySqlDataAdapter data1 = new MySqlDataAdapter(query1, con);
+            DataTable dt1 = new DataTable();
+            data1.Fill(dt1);
+
+            string query2 = " select * FROM admin where admin.masterid = '" + user + "'";
+            MySqlDataAdapter data2 = new MySqlDataAdapter(query2, con);
+            DataTable dt2 = new DataTable();
+            data2.Fill(dt2);
+
+            string query3 = " select * FROM deliveryboy where  deliveryboy.user = '" + user + "'";
+            MySqlDataAdapter data3 = new MySqlDataAdapter(query3, con);
+            DataTable dt3 = new DataTable();
+            data3.Fill(dt3);
+            if(dt.Rows.Count==1|| dt1.Rows.Count == 1 || dt2.Rows.Count == 1 || dt3.Rows.Count == 1 )
+            {
+
+                a = false;
+            }
+            else
+            {
+                a = true;
+            }
+            return a;
+        }
+
+
+
+        public static void likecolor(String username,String database,String foodno,PictureBox like,PictureBox unlike)
+        {
+            MySqlConnection con = new MySqlConnection(Cryptography.con());
+            String query2 = "SELECT like" +foodno+ ",unlike"+foodno+"  FROM  "+database+"  where username= '"+ username+"'";
+            MySqlDataAdapter data2 = new MySqlDataAdapter(query2, con);
+            DataTable dt2 = new DataTable();
+            data2.Fill(dt2);
+            int a = Int32.Parse(dt2.Rows[0][0].ToString());
+            int b = Int32.Parse(dt2.Rows[0][1].ToString());
+            if (a == 1 && b == 0)
+            {
+
+                like.BackColor = Color.LightBlue;
+                unlike.BackColor = Color.Aqua;
+
+
+            }
+            else if (a == 0 && b == 1)
+            {
+
+                like.BackColor = Color.Aqua;
+                unlike.BackColor = Color.LightBlue;
+
+
+            }
+            else if (a == 0 && b == 0)
+            {
+
+                like.BackColor = Color.White;
+                unlike.BackColor = Color.White;
+
+            }
+
+
+
+
+
+        }
     }
 }

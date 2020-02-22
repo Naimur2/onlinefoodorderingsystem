@@ -63,5 +63,10 @@ namespace WindowsFormsApplication2
         {
 
         }
+
+        private void Form8_Deactivate(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
