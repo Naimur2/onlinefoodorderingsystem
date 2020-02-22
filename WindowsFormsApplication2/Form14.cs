@@ -37,7 +37,7 @@ namespace WindowsFormsApplication2
         private void Form14_Load(object sender, EventArgs e)
         {
           
-            String query = "SELECT foodno SI,foodname as Foodname FROM food order by foodno";
+            String query = "SELECT foodno SI,foodname as Foodname FROM food where foodno in 11 to 18 order by foodno";
             MySqlDataAdapter data = new MySqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             data.Fill(dt);
