@@ -34,6 +34,7 @@ namespace WindowsFormsApplication2
                 pictureBox4.Visible = true;
                 pictureBox5.Visible = false;
             }
+           
             else if (Textbox2.Text == "" && Textbox2.isOnFocused!=true)
             {
                 Textbox2.isPassword = false;
@@ -112,7 +113,12 @@ namespace WindowsFormsApplication2
                 Application.Exit();
 
             }
-            else if (Textbox1.Text == "")
+                else if (CheckBox1.Checked == false)
+                {
+                    MessageBox.Show("YouShould accept our terms", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                else if (Textbox1.Text == "")
             {
 
 
@@ -354,10 +360,7 @@ public void defaul()
 
         private void Textbox2_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Enter)
-            {
-                bunifuButton1_Click((object)sender, (EventArgs)e);
-            }
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -457,6 +460,24 @@ public void defaul()
         private void bunifuLabel7_MouseLeave(object sender, EventArgs e)
         {
             bunifuLabel5.ForeColor = Color.Magenta;
+        }
+
+        private void bunifuCheckbox4_OnChange(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Textbox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Textbox2_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                bunifuButton1_Click((object)sender, (EventArgs)e);
+            }
         }
     }
 }

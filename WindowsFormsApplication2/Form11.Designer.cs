@@ -556,7 +556,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1127, 577);
+            this.ClientSize = new System.Drawing.Size(1144, 594);
             this.Controls.Add(this.checkbox2);
             this.Controls.Add(this.checkbox1);
             this.Controls.Add(this.bunifuButton5);

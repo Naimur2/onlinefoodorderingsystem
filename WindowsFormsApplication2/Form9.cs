@@ -35,6 +35,7 @@ namespace WindowsFormsApplication2
 
         private void Form9_Load(object sender, EventArgs e)
         {
+            log.openchild(new Form19("manager"), panel2);
             timer1.Start();
             label72.Text = DateTime.Now.ToShortDateString();
             label73.Text = DateTime.Now.ToShortTimeString();
@@ -99,7 +100,12 @@ namespace WindowsFormsApplication2
 
         private void bunifuButton3_Click_1(object sender, EventArgs e)
         {
-            log.openchild(new Form14(label1.Text), panel2);
+            log.openchild(new Form14("SELECT foodno SI, foodname as Foodname FROM food where foodno between 1 and 26 order by foodno "), panel2);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

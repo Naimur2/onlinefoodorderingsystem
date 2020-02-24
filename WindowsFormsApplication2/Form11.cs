@@ -180,7 +180,12 @@ namespace WindowsFormsApplication2
 
                 dataa.Fill(zz);
 
+                string query = "SELECT ord_no,Cu_status from delivery where cu_status='Food not receieved' and ord_no='" + si.Text + "'";
 
+                MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+                DataTable z = new DataTable();
+
+                dataa.Fill(z);
 
 
 
@@ -192,11 +197,23 @@ namespace WindowsFormsApplication2
                     checkbox1.Enabled = false;
                     checkbox1.Checked = true;
 
-                    checkbox2.Visible = false;
+                    checkbox2.Visible = true;
                     checkbox2.Enabled = false;
                     bunifuLabel10.Visible = true;
-                    bunifuLabel11.Visible = false;
-                   
+                    bunifuLabel11.Visible = true;
+
+                }
+              else  if (z.Rows.Count == 1)
+                {
+                    checkbox1.Visible = true;
+                    checkbox1.Enabled = false;
+                    checkbox2.Checked = true;
+
+                    checkbox2.Visible = true;
+                    checkbox2.Enabled = false;
+                    bunifuLabel10.Visible = true;
+                    bunifuLabel11.Visible = true;
+
                 }
                 else
                 {

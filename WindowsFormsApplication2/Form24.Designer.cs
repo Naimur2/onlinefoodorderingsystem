@@ -79,7 +79,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(519, 0);
+            this.label1.Location = new System.Drawing.Point(450, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 23);
             this.label1.TabIndex = 151;
@@ -103,7 +103,7 @@
             this.panel1.Controls.Add(this.t3);
             this.panel1.Controls.Add(this.t2);
             this.panel1.Controls.Add(this.t1);
-            this.panel1.Location = new System.Drawing.Point(344, 23);
+            this.panel1.Location = new System.Drawing.Point(276, 21);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(527, 583);
             this.panel1.TabIndex = 152;
@@ -420,7 +420,7 @@
             this.panel2.Controls.Add(this.t9);
             this.panel2.Controls.Add(this.t8);
             this.panel2.Controls.Add(this.t7);
-            this.panel2.Location = new System.Drawing.Point(344, 23);
+            this.panel2.Location = new System.Drawing.Point(276, 21);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(527, 583);
             this.panel2.TabIndex = 153;
@@ -576,7 +576,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(370, 6);
+            this.label11.Location = new System.Drawing.Point(302, 4);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(75, 17);
             this.label11.TabIndex = 178;

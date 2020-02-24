@@ -130,12 +130,12 @@
             // CUSTOMER
             // 
             this.CUSTOMER.AutoSize = true;
-            this.CUSTOMER.Location = new System.Drawing.Point(573, 25);
+            this.CUSTOMER.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CUSTOMER.Location = new System.Drawing.Point(174, 70);
             this.CUSTOMER.Name = "CUSTOMER";
-            this.CUSTOMER.Size = new System.Drawing.Size(75, 17);
+            this.CUSTOMER.Size = new System.Drawing.Size(192, 26);
             this.CUSTOMER.TabIndex = 109;
-            this.CUSTOMER.Text = "CUSTOMER";
-            this.CUSTOMER.Visible = false;
+            this.CUSTOMER.Text = "Customer Details";
             // 
             // bunifuLabel1
             // 
@@ -267,6 +267,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1143, 616);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.CUSTOMER);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.bunifuPictureBox1);
             this.Controls.Add(this.username);
@@ -274,7 +275,6 @@
             this.Controls.Add(this.bunifuLabel2);
             this.Controls.Add(this.bunifuLabel3);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.CUSTOMER);
             this.Controls.Add(this.DataGridView1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Fuchsia;

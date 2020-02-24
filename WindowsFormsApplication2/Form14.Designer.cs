@@ -72,6 +72,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.DataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unlike1)).BeginInit();
@@ -625,12 +626,23 @@
             this.DataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.MediumSeaGreen;
             this.DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(406, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.TabIndex = 91;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // Form14
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1143, 616);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.DataGridView1);
             this.Controls.Add(this.bunifuLabel6);
             this.Controls.Add(this.textBox4);
@@ -709,5 +721,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.UI.WinForms.BunifuDataGridView DataGridView1;
+        private System.Windows.Forms.Label label1;
     }
 }

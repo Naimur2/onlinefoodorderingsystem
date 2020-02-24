@@ -17,6 +17,7 @@ namespace WindowsFormsApplication2
         public Form14(string ms)
         {
             InitializeComponent();
+            label1.Text = ms;
      
         }
 
@@ -33,11 +34,41 @@ namespace WindowsFormsApplication2
         {
 
         }
+        public void update()
+        {
+            String query = label1.Text;
+            MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            data.Fill(dt);
+
+
+            DataTable cc = new DataTable();
+
+            int i = dt.Rows.Count;
+
+            cc.Columns.Add("Si", typeof(string));
+            cc.Columns.Add("Food Name", typeof(string));
+            for (int j = 0; j < i; j++)
+            {
+
+
+                cc.Rows.Add(dt.Rows[j][0].ToString(), dt.Rows[j][1].ToString());
+
+            }
+            DataGridView1.RowTemplate.Height = 70;
+            DataGridView1.DataSource = cc;
+
+
+
+            DataGridView1.DataSource = cc;
+
+
+        }
 
         private void Form14_Load(object sender, EventArgs e)
         {
-          
-            String query = "SELECT foodno SI,foodname as Foodname FROM food where foodno in 11 to 18 order by foodno";
+
+            String query = label1.Text;
             MySqlDataAdapter data = new MySqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             data.Fill(dt);
@@ -217,7 +248,7 @@ namespace WindowsFormsApplication2
         private void bunifuButton6_Click(object sender, EventArgs e)
         {
             Regex m = new Regex("$(0-9){2,8}^");
-            string message = "Do you want to order this food?";
+            string message = "Do you want to update information?";
             string title = "Order";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show(message, title, buttons);
@@ -275,8 +306,8 @@ namespace WindowsFormsApplication2
                         con.Close();
                         food(Int32.Parse(label5.Text));
                         bb(Int32.Parse(label5.Text));
-                        MessageBox.Show("Data updated", "Successfull", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                        MessageBox.Show("Data updated", "Successfull", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        update();
                     }
                     catch (Exception c)
 

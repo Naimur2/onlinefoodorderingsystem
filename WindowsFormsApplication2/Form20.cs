@@ -88,6 +88,26 @@ namespace WindowsFormsApplication2
             label72.Text = DateTime.Now.ToShortDateString();
             label73.Text = DateTime.Now.ToShortTimeString();
             log.openchild(new Form5(label1.Text), panel2);
+            if (panelfood.Visible == false && panelaccount.Visible == true)
+            {
+                panelfood.Visible = true;
+                panelaccount.Visible = false;
+
+            }
+            else
+               if (panelfood.Visible == true && panelaccount.Visible == false)
+            {
+                panelfood.Visible = false;
+                panelaccount.Visible = false;
+
+            }
+            else
+               if (panelfood.Visible == false && panelaccount.Visible == false)
+            {
+                panelfood.Visible = true;
+                panelaccount.Visible = false;
+
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -124,15 +144,13 @@ namespace WindowsFormsApplication2
 
         private void bunifuButton8_Click(object sender, EventArgs e)
         {
-            if(panelaccount.Visible==false && panelfood.Visible==false)
+            
+            if (panelaccount.Visible==false && panelfood.Visible==false)
             {
 
                 panelaccount.Visible = true;
                 panelfood.Visible = false;
-                button8.IdleFillColor = Color.FromArgb(0, 200, 50);
-                button4.IdleFillColor = Color.FromArgb(255, 128, 0);
-                bunifuButton10.IdleFillColor = Color.FromArgb(255, 128, 0);
-                bunifuButton11.IdleFillColor = Color.FromArgb(255, 128, 0);
+                
 
             }
         else    if (panelaccount.Visible == false && panelfood.Visible == true)
@@ -140,10 +158,7 @@ namespace WindowsFormsApplication2
 
                 panelaccount.Visible = true;
                 panelfood.Visible = false;
-                button8.IdleFillColor = Color.FromArgb(0, 200, 50);
-                button4.IdleFillColor = Color.FromArgb(255, 128, 0);
-                bunifuButton10.IdleFillColor = Color.FromArgb(255, 128, 0);
-                bunifuButton11.IdleFillColor = Color.FromArgb(255, 128, 0);
+               
 
 
             }
@@ -152,10 +167,7 @@ namespace WindowsFormsApplication2
 
                 panelaccount.Visible = false;
                 panelfood.Visible = false;
-                button4.IdleFillColor = Color.FromArgb(255, 128, 0);
-                button8.IdleFillColor = Color.FromArgb(255, 128, 0);
-                bunifuButton10.IdleFillColor = Color.FromArgb(255, 128, 0);
-                bunifuButton11.IdleFillColor = Color.FromArgb(255, 128, 0);
+                
 
             }
 
@@ -163,60 +175,46 @@ namespace WindowsFormsApplication2
 
         private void bunifuButton4_Click(object sender, EventArgs e)
         {
-            if(panelfood.Visible==false && panelaccount.Visible==true)
+            
+            if (panelfood.Visible==false && panelaccount.Visible==true)
             {
                 panelfood.Visible = true;
                 panelaccount.Visible = false;
-                button4.IdleFillColor = Color.FromArgb(0, 200, 50);
-                button8.IdleFillColor = Color.FromArgb(255, 128, 0);
-                bunifuButton10.IdleFillColor = Color.FromArgb(255, 128, 0);
-                bunifuButton11.IdleFillColor = Color.FromArgb(255, 128, 0);
+               
             }
             else
                 if (panelfood.Visible == true && panelaccount.Visible == false)
             {
                 panelfood.Visible = false;
                 panelaccount.Visible = false;
-                button4.IdleFillColor = Color.FromArgb(255, 128, 0);
-                button8.IdleFillColor = Color.FromArgb(255, 128, 0);
-                bunifuButton10.IdleFillColor = Color.FromArgb(255, 128, 0);
-                bunifuButton11.IdleFillColor = Color.FromArgb(255, 128, 0);
+              
             }
             else
                 if (panelfood.Visible == false && panelaccount.Visible == false)
             {
                 panelfood.Visible = true;
                 panelaccount.Visible = false;
-                button4.IdleFillColor = Color.FromArgb(0, 200, 50);
-                button8.IdleFillColor = Color.FromArgb(255, 128, 0);
-                
-                bunifuButton10.IdleFillColor = Color.FromArgb(255, 128, 0);
-                bunifuButton11.IdleFillColor = Color.FromArgb(255, 128, 0);
+               
             }
 
         }
 
         private void bunifuButton10_Click(object sender, EventArgs e)
         {
+           
             if (panelfood.Visible == false && panelaccount.Visible == false)
             {
                 panelfood.Visible = false;
                 panelaccount.Visible = false;
 
-                bunifuButton10.IdleFillColor = Color.FromArgb(0, 200, 50);
-                bunifuButton11.IdleFillColor = Color.FromArgb(255, 128, 0);
-                button4.IdleFillColor = Color.FromArgb(255, 128, 0);
-                button8.IdleFillColor = Color.FromArgb(255, 128, 0);
+                
             }
             else
                if (panelfood.Visible == true || panelaccount.Visible == true)
             {
                 panelfood.Visible = false;
                 panelaccount.Visible = false;
-                bunifuButton10.IdleFillColor = Color.FromArgb(0, 200, 50);
-                bunifuButton11.IdleFillColor = Color.FromArgb(255, 128, 0);
-                button4.IdleFillColor = Color.FromArgb(255, 128, 0);
-                button8.IdleFillColor = Color.FromArgb(255, 128, 0);
+               
 
             }
             openChildFormInPanel(new Form11(label1.Text));
@@ -239,24 +237,19 @@ namespace WindowsFormsApplication2
 
         private void bunifuButton11_Click(object sender, EventArgs e)
         {
+           
             if (panelfood.Visible == false && panelaccount.Visible == false)
             {
                 panelfood.Visible = false;
                 panelaccount.Visible = false;
-                bunifuButton11.IdleFillColor = Color.FromArgb(0, 200, 50);
-                bunifuButton10.IdleFillColor = Color.FromArgb(255, 128, 0);
-                button4.IdleFillColor = Color.FromArgb(255, 128, 0);
-                button8.IdleFillColor = Color.FromArgb(255, 128, 0);
+              
             }
             else
                  if (panelfood.Visible == true || panelaccount.Visible == true)
             {
                 panelfood.Visible = false;
                 panelaccount.Visible = false;
-                bunifuButton11.IdleFillColor = Color.FromArgb(0, 200, 50);
-                bunifuButton10.IdleFillColor = Color.FromArgb(255, 128, 0);
-                button4.IdleFillColor = Color.FromArgb(255, 128, 0);
-                button8.IdleFillColor = Color.FromArgb(255, 128, 0);
+                
             }
             openChildFormInPanel(new Form19("customer"));
         }
@@ -264,6 +257,16 @@ namespace WindowsFormsApplication2
         private void button2_Click(object sender, EventArgs e)
         {
             openChildFormInPanel(new Form21(label1.Text));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            log.openchild(new Form26(label1.Text), panel2);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

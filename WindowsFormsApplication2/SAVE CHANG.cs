@@ -23,8 +23,8 @@ namespace WindowsFormsApplication2
         MySqlConnection con = new MySqlConnection(Cryptography.con());
         private void SAVE_Load(object sender, EventArgs e)
         {
-            
-           
+            log.openchild(new Form27(label1.Text), panel2);
+
 
         }
 
@@ -63,6 +63,11 @@ namespace WindowsFormsApplication2
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             log.Exit();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

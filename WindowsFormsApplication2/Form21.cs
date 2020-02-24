@@ -46,15 +46,15 @@ namespace WindowsFormsApplication2
 
          
 
-                Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "11", like1, unlike1);
-                Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "12", like2, unlike2);
-                Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "13", like3, unlike3);
+            Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "11", like1, unlike1);
+            Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "12", like2, unlike2);
+            Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "13", like3, unlike3);
             Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "14", like4, unlike4);
-            Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "18", like5, unlike5);
             Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "15", like6, unlike6);
             Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "16", like7, unlike7);
             Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "17", like8, unlike8);
-            
+            Class1.likecolor(Cryptography.Encrypt(label1.Text), "ratings", "18", like5, unlike5);
+
         }
 
 
